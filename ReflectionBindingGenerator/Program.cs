@@ -9,10 +9,10 @@ namespace ReflectionBindingGenerator
         {
             if(args.Length != 2)
             {
-                Console.Error.WriteLine("Run with ReflectionBindingGenerator.exe <SolastaGameDirectory> <OutputDirectory>");
+                Console.Error.WriteLine("Run with ReflectionBindingGenerator.exe <AssemblyPath> <OutputDirectory>");
                 return;
             }
-            var assemblyCSharpPath = Path.Combine(args[0], "Solasta_Data", "Managed", "Assembly-CSharp.dll");
+            var assemblyCSharpPath = args[0];
             if (!File.Exists(assemblyCSharpPath))
             {
                 Console.Error.WriteLine("Could not find assembly at {0}", assemblyCSharpPath);
@@ -27,7 +27,7 @@ namespace ReflectionBindingGenerator
             {
                 Directory.CreateDirectory(args[1]);
             }
-            var generator = new IlSpyBindingGenerator(assemblyCSharpPath, args[1]);
+            var generator = new CecilBindingGenerator(assemblyCSharpPath, args[1]);
             generator.GenerateBindings();
         }
     }

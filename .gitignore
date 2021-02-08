@@ -3,3 +3,5 @@
 obj/
 bin/
 packages/
+BindingTestRunner/ReflectionBindings.dll
+BindingTestRunner/ReflectionBindings.cs

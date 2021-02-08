@@ -5,6 +5,6 @@
     </StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>"C:\Program Files %28x86%29\Steam\steamapps\common\SOLASTA" "C:\FIles\Code\Solasta\SolastaModApi\SolastaModApi\ReflectionBindings"</StartArguments>
+    <StartArguments>"C:\Program Files %28x86%29\Steam\steamapps\common\Slasta_COTM\Solasta_Data\Managed\Assembly-CSharp.dll" Test</StartArguments>
   </PropertyGroup>
 </Project>

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolastaModApi", "SolastaMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionBindingGenerator", "ReflectionBindingGenerator\ReflectionBindingGenerator.csproj", "{BE1A0FD5-2078-4965-9D3D-B076341A6B90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingTestTarget", "BindingTestTarget\BindingTestTarget.csproj", "{28470577-22BD-4A26-AA91-A326B4BABB06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingTestRunner", "BindingTestRunner\BindingTestRunner.csproj", "{947E1A8F-683D-477E-B573-962DDEAB3214}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,22 @@ Global
 		{BE1A0FD5-2078-4965-9D3D-B076341A6B90}.InstallRelease|Any CPU.Build.0 = Release|Any CPU
 		{BE1A0FD5-2078-4965-9D3D-B076341A6B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE1A0FD5-2078-4965-9D3D-B076341A6B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.InstallDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.InstallDebug|Any CPU.Build.0 = Debug|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.InstallRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.InstallRelease|Any CPU.Build.0 = Release|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28470577-22BD-4A26-AA91-A326B4BABB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.InstallDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.InstallDebug|Any CPU.Build.0 = Debug|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.InstallRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.InstallRelease|Any CPU.Build.0 = Release|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947E1A8F-683D-477E-B573-962DDEAB3214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

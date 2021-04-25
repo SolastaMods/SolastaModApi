@@ -1,0 +1,13 @@
+using SolastaModApi.Infrastructure;
+using System.Collections.Generic;
+
+namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
+{
+    public static class GuiScreenIndexExtensions
+    {
+        public static void SetGuiIndexSlots(this GuiScreenIndex definition, List<GuiScreenIndex.IndexSlot> value)
+        {
+            definition.SetField("guiIndexSlots", value);
+        }
+    }
+}

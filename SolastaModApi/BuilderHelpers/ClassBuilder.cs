@@ -7,8 +7,14 @@ using static CharacterClassDefinition;
 
 namespace SolastaModApi
 {
-    public class ClassBuilder
+    public class ClassBuilder : CharacterClassDefinitionBuilder
     {
+        // The only change is that the ctor requires name and guid
+        public ClassBuilder(string name, string guid) : base(name, guid)
+        {
+        }
+
+        /*
         private readonly CharacterClassDefinition myClass;
 
         public ClassBuilder()
@@ -158,5 +164,6 @@ namespace SolastaModApi
             CharacterClassDatabase.Add(myClass);
             return myClass;
         }
+        */
     }
 }

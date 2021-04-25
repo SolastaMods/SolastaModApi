@@ -1,23 +1,25 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionFactionChangeExtensions
     {
-        public static void SetChangeMode(this FeatureDefinitionFactionChange definition, FeatureDefinitionFactionChange.Mode value)
+        public static FeatureDefinitionFactionChange SetChangeMode(this FeatureDefinitionFactionChange definition, FeatureDefinitionFactionChange.Mode value)
         {
             definition.SetField("changeMode", value);
+            return definition;
         }
 
-        public static void SetSpecificFactionName(this FeatureDefinitionFactionChange definition, String value)
+        public static FeatureDefinitionFactionChange SetSpecificFactionName(this FeatureDefinitionFactionChange definition, string value)
         {
             definition.SetField("specificFactionName", value);
+            return definition;
         }
 
-        public static void SetTotalControl(this FeatureDefinitionFactionChange definition, Boolean value)
+        public static FeatureDefinitionFactionChange SetTotalControl(this FeatureDefinitionFactionChange definition, bool value)
         {
             definition.SetField("totalControl", value);
+            return definition;
         }
     }
 }

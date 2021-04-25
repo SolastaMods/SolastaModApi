@@ -1,25 +1,27 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class DieTypeDefinitionExtensions
     {
-        public static void SetDieType(this DieTypeDefinition definition, DieType value)
+        public static DieTypeDefinition SetDieType(this DieTypeDefinition definition, DieType value)
         {
             definition.SetField("dieType", value);
+            return definition;
         }
 
-        public static void SetRollingMeshReference(this DieTypeDefinition definition, AssetReference value)
+        public static DieTypeDefinition SetRollingMeshReference(this DieTypeDefinition definition, AssetReference value)
         {
             definition.SetField("rollingMeshReference", value);
+            return definition;
         }
 
-        public static void SetScaleFactor(this DieTypeDefinition definition, Single value)
+        public static DieTypeDefinition SetScaleFactor(this DieTypeDefinition definition, float value)
         {
             definition.SetField("scaleFactor", value);
+            return definition;
         }
     }
 }

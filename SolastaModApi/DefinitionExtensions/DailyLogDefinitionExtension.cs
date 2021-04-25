@@ -1,28 +1,31 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class DailyLogDefinitionExtensions
     {
-        public static void SetHeaderHeight(this DailyLogDefinition definition, Int32 value)
+        public static DailyLogDefinition SetHeaderHeight(this DailyLogDefinition definition, int value)
         {
             definition.SetField("headerHeight", value);
+            return definition;
         }
 
-        public static void SetSubItemHeight(this DailyLogDefinition definition, Int32 value)
+        public static DailyLogDefinition SetSubItemHeight(this DailyLogDefinition definition, int value)
         {
             definition.SetField("subItemHeight", value);
+            return definition;
         }
 
-        public static void SetSubItemSpacing(this DailyLogDefinition definition, Int32 value)
+        public static DailyLogDefinition SetSubItemSpacing(this DailyLogDefinition definition, int value)
         {
             definition.SetField("subItemSpacing", value);
+            return definition;
         }
 
-        public static void SetTableBottomMargin(this DailyLogDefinition definition, Int32 value)
+        public static DailyLogDefinition SetTableBottomMargin(this DailyLogDefinition definition, int value)
         {
             definition.SetField("tableBottomMargin", value);
+            return definition;
         }
     }
 }

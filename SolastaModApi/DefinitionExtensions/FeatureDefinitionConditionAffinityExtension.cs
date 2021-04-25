@@ -1,39 +1,44 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionConditionAffinityExtensions
     {
-        public static void SetConditionAffinityType(this FeatureDefinitionConditionAffinity definition, ConditionAffinityType value)
+        public static FeatureDefinitionConditionAffinity SetConditionAffinityType(this FeatureDefinitionConditionAffinity definition, ConditionAffinityType value)
         {
             definition.SetField("conditionAffinityType", value);
+            return definition;
         }
 
-        public static void SetConditionType(this FeatureDefinitionConditionAffinity definition, String value)
+        public static FeatureDefinitionConditionAffinity SetConditionType(this FeatureDefinitionConditionAffinity definition, string value)
         {
             definition.SetField("conditionType", value);
+            return definition;
         }
 
-        public static void SetRerollAdvantageType(this FeatureDefinitionConditionAffinity definition, AdvantageType value)
+        public static FeatureDefinitionConditionAffinity SetRerollAdvantageType(this FeatureDefinitionConditionAffinity definition, AdvantageType value)
         {
             definition.SetField("rerollAdvantageType", value);
+            return definition;
         }
 
-        public static void SetRerollSaveWhenGained(this FeatureDefinitionConditionAffinity definition, Boolean value)
+        public static FeatureDefinitionConditionAffinity SetRerollSaveWhenGained(this FeatureDefinitionConditionAffinity definition, bool value)
         {
             definition.SetField("rerollSaveWhenGained", value);
+            return definition;
         }
 
-        public static void SetSavingThrowAdvantageType(this FeatureDefinitionConditionAffinity definition, AdvantageType value)
+        public static FeatureDefinitionConditionAffinity SetSavingThrowAdvantageType(this FeatureDefinitionConditionAffinity definition, AdvantageType value)
         {
             definition.SetField("savingThrowAdvantageType", value);
+            return definition;
         }
 
-        public static void SetSavingThrowModifier(this FeatureDefinitionConditionAffinity definition, Int32 value)
+        public static FeatureDefinitionConditionAffinity SetSavingThrowModifier(this FeatureDefinitionConditionAffinity definition, int value)
         {
             definition.SetField("savingThrowModifier", value);
+            return definition;
         }
     }
 }

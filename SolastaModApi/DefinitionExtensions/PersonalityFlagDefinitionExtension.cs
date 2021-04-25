@@ -1,18 +1,19 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class PersonalityFlagDefinitionExtensions
     {
-        public static void SetDialog(this PersonalityFlagDefinition definition, Boolean value)
+        public static PersonalityFlagDefinition SetDialog(this PersonalityFlagDefinition definition, bool value)
         {
             definition.SetField("dialog", value);
+            return definition;
         }
 
-        public static void SetGameplay(this PersonalityFlagDefinition definition, Boolean value)
+        public static PersonalityFlagDefinition SetGameplay(this PersonalityFlagDefinition definition, bool value)
         {
             definition.SetField("gameplay", value);
+            return definition;
         }
     }
 }

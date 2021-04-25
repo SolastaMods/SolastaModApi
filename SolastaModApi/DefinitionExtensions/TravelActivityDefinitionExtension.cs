@@ -1,49 +1,56 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class TravelActivityDefinitionExtensions
     {
-        public static void SetFatigueImpactPerHour(this TravelActivityDefinition definition, Single value)
+        public static TravelActivityDefinition SetFatigueImpactPerHour(this TravelActivityDefinition definition, float value)
         {
             definition.SetField("fatigueImpactPerHour", value);
+            return definition;
         }
 
-        public static void SetFixedEvents(this TravelActivityDefinition definition, List<TravelEventFixedOccurenceDescription> value)
+        public static TravelActivityDefinition SetFixedEvents(this TravelActivityDefinition definition, List<TravelEventFixedOccurenceDescription> value)
         {
             definition.SetField("fixedEvents", value);
+            return definition;
         }
 
-        public static void SetIsDynamic(this TravelActivityDefinition definition, Boolean value)
+        public static TravelActivityDefinition SetIsDynamic(this TravelActivityDefinition definition, bool value)
         {
             definition.SetField("isDynamic", value);
+            return definition;
         }
 
-        public static void SetNavigationActivity(this TravelActivityDefinition definition, Boolean value)
+        public static TravelActivityDefinition SetNavigationActivity(this TravelActivityDefinition definition, bool value)
         {
             definition.SetField("navigationActivity", value);
+            return definition;
         }
 
-        public static void SetRandomEvents(this TravelActivityDefinition definition, List<TravelEventProbabilityDescription> value)
+        public static TravelActivityDefinition SetRandomEvents(this TravelActivityDefinition definition, List<TravelEventProbabilityDescription> value)
         {
             definition.SetField("randomEvents", value);
+            return definition;
         }
 
-        public static void SetRestActivity(this TravelActivityDefinition definition, Boolean value)
+        public static TravelActivityDefinition SetRestActivity(this TravelActivityDefinition definition, bool value)
         {
             definition.SetField("restActivity", value);
+            return definition;
         }
 
-        public static void SetStandardDurationHours(this TravelActivityDefinition definition, Int32 value)
+        public static TravelActivityDefinition SetStandardDurationHours(this TravelActivityDefinition definition, int value)
         {
             definition.SetField("standardDurationHours", value);
+            return definition;
         }
 
-        public static void SetStandardStartHour(this TravelActivityDefinition definition, Int32 value)
+        public static TravelActivityDefinition SetStandardStartHour(this TravelActivityDefinition definition, int value)
         {
             definition.SetField("standardStartHour", value);
+            return definition;
         }
     }
 }

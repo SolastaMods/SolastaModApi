@@ -4,9 +4,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class MorphotypeCategoryDefinitionExtensions
     {
-        public static void SetChoiceForm(this MorphotypeCategoryDefinition definition, MorphotypeCategoryDefinition.Form value)
+        public static MorphotypeCategoryDefinition SetChoiceForm(this MorphotypeCategoryDefinition definition, MorphotypeCategoryDefinition.Form value)
         {
             definition.SetField("choiceForm", value);
+            return definition;
         }
     }
 }

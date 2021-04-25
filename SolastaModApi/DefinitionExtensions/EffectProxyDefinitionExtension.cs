@@ -1,6 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System;
 using System.Collections.Generic;
 using static RuleDefinitions;
 
@@ -8,99 +7,118 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class EffectProxyDefinitionExtensions
     {
-        public static void SetAdditionalFeatures(this EffectProxyDefinition definition, List<FeatureDefinition> value)
+        public static EffectProxyDefinition SetAdditionalFeatures(this EffectProxyDefinition definition, List<FeatureDefinition> value)
         {
             definition.SetField("additionalFeatures", value);
+            return definition;
         }
 
-        public static void SetAddLightSource(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetAddLightSource(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("addLightSource", value);
+            return definition;
         }
 
-        public static void SetAttackImpactParticle(this EffectProxyDefinition definition, AssetReference value)
+        public static EffectProxyDefinition SetAttackImpactParticle(this EffectProxyDefinition definition, AssetReference value)
         {
             definition.SetField("attackImpactParticle", value);
+            return definition;
         }
 
-        public static void SetAttackMethod(this EffectProxyDefinition definition, ProxyAttackMethod value)
+        public static EffectProxyDefinition SetAttackMethod(this EffectProxyDefinition definition, ProxyAttackMethod value)
         {
             definition.SetField("attackMethod", value);
+            return definition;
         }
 
-        public static void SetAttackParticle(this EffectProxyDefinition definition, AssetReference value)
+        public static EffectProxyDefinition SetAttackParticle(this EffectProxyDefinition definition, AssetReference value)
         {
             definition.SetField("attackParticle", value);
+            return definition;
         }
 
-        public static void SetCanAttack(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetCanAttack(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("canAttack", value);
+            return definition;
         }
 
-        public static void SetCanMove(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetCanMove(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("canMove", value);
+            return definition;
         }
 
-        public static void SetDamageDie(this EffectProxyDefinition definition, DieType value)
+        public static EffectProxyDefinition SetDamageDie(this EffectProxyDefinition definition, DieType value)
         {
             definition.SetField("damageDie", value);
+            return definition;
         }
 
-        public static void SetDamageType(this EffectProxyDefinition definition, String value)
+        public static EffectProxyDefinition SetDamageType(this EffectProxyDefinition definition, string value)
         {
             definition.SetField("damageType", value);
+            return definition;
         }
 
-        public static void SetHasPortrait(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetHasPortrait(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("hasPortrait", value);
+            return definition;
         }
 
-        public static void SetHasPresentation(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetHasPresentation(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("hasPresentation", value);
+            return definition;
         }
 
-        public static void SetImpactsPlacement(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetImpactsPlacement(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("impactsPlacement", value);
+            return definition;
         }
 
-        public static void SetIsEmptyPresentation(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetIsEmptyPresentation(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("isEmptyPresentation", value);
+            return definition;
         }
 
-        public static void SetLightSourceForm(this EffectProxyDefinition definition, LightSourceForm value)
+        public static EffectProxyDefinition SetLightSourceForm(this EffectProxyDefinition definition, LightSourceForm value)
         {
             definition.SetField("lightSourceForm", value);
+            return definition;
         }
 
-        public static void SetModelScale(this EffectProxyDefinition definition, Single value)
+        public static EffectProxyDefinition SetModelScale(this EffectProxyDefinition definition, float value)
         {
             definition.SetField("modelScale", value);
+            return definition;
         }
 
-        public static void SetPortraitSpriteReference(this EffectProxyDefinition definition, AssetReferenceSprite value)
+        public static EffectProxyDefinition SetPortraitSpriteReference(this EffectProxyDefinition definition, AssetReferenceSprite value)
         {
             definition.SetField("portraitSpriteReference", value);
+            return definition;
         }
 
-        public static void SetPrefabReference(this EffectProxyDefinition definition, AssetReference value)
+        public static EffectProxyDefinition SetPrefabReference(this EffectProxyDefinition definition, AssetReference value)
         {
             definition.SetField("prefabReference", value);
+            return definition;
         }
 
-        public static void SetShowWorldLocationFeedbacks(this EffectProxyDefinition definition, Boolean value)
+        public static EffectProxyDefinition SetShowWorldLocationFeedbacks(this EffectProxyDefinition definition, bool value)
         {
             definition.SetField("showWorldLocationFeedbacks", value);
+            return definition;
         }
 
-        public static void SetSoundEffectOnHitDescription(this EffectProxyDefinition definition, SoundEffectOnHitDescription value)
+        public static EffectProxyDefinition SetSoundEffectOnHitDescription(this EffectProxyDefinition definition, SoundEffectOnHitDescription value)
         {
             definition.SetField("soundEffectOnHitDescription", value);
+            return definition;
         }
     }
 }

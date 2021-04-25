@@ -1,29 +1,32 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class AlignmentDefinitionExtensions
     {
-        public static void SetDefaultPersonalityFlags(this AlignmentDefinition definition, List<String> value)
+        public static AlignmentDefinition SetDefaultPersonalityFlags(this AlignmentDefinition definition, List<string> value)
         {
             definition.SetField("defaultPersonalityFlags", value);
+            return definition;
         }
 
-        public static void SetGoodnessAxis(this AlignmentDefinition definition, Int32 value)
+        public static AlignmentDefinition SetGoodnessAxis(this AlignmentDefinition definition, int value)
         {
             definition.SetField("goodnessAxis", value);
+            return definition;
         }
 
-        public static void SetLawAxis(this AlignmentDefinition definition, Int32 value)
+        public static AlignmentDefinition SetLawAxis(this AlignmentDefinition definition, int value)
         {
             definition.SetField("lawAxis", value);
+            return definition;
         }
 
-        public static void SetOptionalPersonalityFlags(this AlignmentDefinition definition, List<PersonalityFlagOccurence> value)
+        public static AlignmentDefinition SetOptionalPersonalityFlags(this AlignmentDefinition definition, List<PersonalityFlagOccurence> value)
         {
             definition.SetField("optionalPersonalityFlags", value);
+            return definition;
         }
     }
 }

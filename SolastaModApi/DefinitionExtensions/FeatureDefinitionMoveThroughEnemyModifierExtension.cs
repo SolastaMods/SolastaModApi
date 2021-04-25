@@ -1,13 +1,13 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionMoveThroughEnemyModifierExtensions
     {
-        public static void SetMinSizeDifference(this FeatureDefinitionMoveThroughEnemyModifier definition, Int32 value)
+        public static FeatureDefinitionMoveThroughEnemyModifier SetMinSizeDifference(this FeatureDefinitionMoveThroughEnemyModifier definition, int value)
         {
             definition.SetField("minSizeDifference", value);
+            return definition;
         }
     }
 }

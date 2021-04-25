@@ -1,33 +1,37 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class CalendarDefinitionExtensions
     {
-        public static void SetDaysPerMonth(this CalendarDefinition definition, Int32 value)
+        public static CalendarDefinition SetDaysPerMonth(this CalendarDefinition definition, int value)
         {
             definition.SetField("daysPerMonth", value);
+            return definition;
         }
 
-        public static void SetMonthsNames(this CalendarDefinition definition, String[] value)
+        public static CalendarDefinition SetMonthsNames(this CalendarDefinition definition, string[] value)
         {
             definition.SetField("monthsNames", value);
+            return definition;
         }
 
-        public static void SetMonthsPerYear(this CalendarDefinition definition, Int32 value)
+        public static CalendarDefinition SetMonthsPerYear(this CalendarDefinition definition, int value)
         {
             definition.SetField("monthsPerYear", value);
+            return definition;
         }
 
-        public static void SetYearFormat(this CalendarDefinition definition, String value)
+        public static CalendarDefinition SetYearFormat(this CalendarDefinition definition, string value)
         {
             definition.SetField("yearFormat", value);
+            return definition;
         }
 
-        public static void SetYearTags(this CalendarDefinition definition, CalendarDefinition.YearTag[] value)
+        public static CalendarDefinition SetYearTags(this CalendarDefinition definition, CalendarDefinition.YearTag[] value)
         {
             definition.SetField("yearTags", value);
+            return definition;
         }
     }
 }

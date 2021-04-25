@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static ActionDefinitions;
 using static RuleDefinitions;
 
@@ -7,104 +6,124 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class ActionDefinitionExtensions
     {
-        public static void SetAbilityScore(this ActionDefinition definition, string value)
+        public static ActionDefinition SetAbilityScore(this ActionDefinition definition, string value)
         {
             definition.SetField("abilityScore", value);
+            return definition;
         }
 
-        public static void SetActionScope(this ActionDefinition definition, ActionScope value)
+        public static ActionDefinition SetActionScope(this ActionDefinition definition, ActionScope value)
         {
             definition.SetField("actionScope", value);
+            return definition;
         }
 
-        public static void SetActionType(this ActionDefinition definition, ActionType value)
+        public static ActionDefinition SetActionType(this ActionDefinition definition, ActionType value)
         {
             definition.SetField("actionType", value);
+            return definition;
         }
 
-        public static void SetActivatedPower(this ActionDefinition definition, FeatureDefinitionPower value)
+        public static ActionDefinition SetActivatedPower(this ActionDefinition definition, FeatureDefinitionPower value)
         {
             definition.SetField("activatedPower", value);
+            return definition;
         }
 
-        public static void SetAddedConditionName(this ActionDefinition definition, String value)
+        public static ActionDefinition SetAddedConditionName(this ActionDefinition definition, string value)
         {
             definition.SetField("addedConditionName", value);
+            return definition;
         }
 
-        public static void SetClassNameOverride(this ActionDefinition definition, String value)
+        public static ActionDefinition SetClassNameOverride(this ActionDefinition definition, string value)
         {
             definition.SetField("classNameOverride", value);
+            return definition;
         }
 
-        public static void SetDieType(this ActionDefinition definition, DieType value)
+        public static ActionDefinition SetDieType(this ActionDefinition definition, DieType value)
         {
             definition.SetField("dieType", value);
+            return definition;
         }
 
-        public static void SetFeedbackOnHoverType(this ActionDefinition definition, FeedbackOnHoverType value)
+        public static ActionDefinition SetFeedbackOnHoverType(this ActionDefinition definition, FeedbackOnHoverType value)
         {
             definition.SetField("feedbackOnHoverType", value);
+            return definition;
         }
 
-        public static void SetFocusCameraOnAction(this ActionDefinition definition, Boolean value)
+        public static ActionDefinition SetFocusCameraOnAction(this ActionDefinition definition, bool value)
         {
             definition.SetField("focusCameraOnAction", value);
+            return definition;
         }
 
-        public static void SetFormType(this ActionDefinition definition, ActionFormType value)
+        public static ActionDefinition SetFormType(this ActionDefinition definition, ActionFormType value)
         {
             definition.SetField("formType", value);
+            return definition;
         }
 
-        public static void SetId(this ActionDefinition definition, Id value)
+        public static ActionDefinition SetId(this ActionDefinition definition, Id value)
         {
             definition.SetField("id", value);
+            return definition;
         }
 
-        public static void SetIterativeTargeting(this ActionDefinition definition, Boolean value)
+        public static ActionDefinition SetIterativeTargeting(this ActionDefinition definition, bool value)
         {
             definition.SetField("iterativeTargeting", value);
+            return definition;
         }
 
-        public static void SetMaxCells(this ActionDefinition definition, Int32 value)
+        public static ActionDefinition SetMaxCells(this ActionDefinition definition, int value)
         {
             definition.SetField("maxCells", value);
+            return definition;
         }
 
-        public static void SetPairedActionId(this ActionDefinition definition, Id value)
+        public static ActionDefinition SetPairedActionId(this ActionDefinition definition, Id value)
         {
             definition.SetField("pairedActionId", value);
+            return definition;
         }
 
-        public static void SetParameter(this ActionDefinition definition, ActionParameter value)
+        public static ActionDefinition SetParameter(this ActionDefinition definition, ActionParameter value)
         {
             definition.SetField("parameter", value);
+            return definition;
         }
 
-        public static void SetPreventsSerialization(this ActionDefinition definition, Boolean value)
+        public static ActionDefinition SetPreventsSerialization(this ActionDefinition definition, bool value)
         {
             definition.SetField("preventsSerialization", value);
+            return definition;
         }
 
-        public static void SetRemovedConditionName(this ActionDefinition definition, String value)
+        public static ActionDefinition SetRemovedConditionName(this ActionDefinition definition, string value)
         {
             definition.SetField("removedConditionName", value);
+            return definition;
         }
 
-        public static void SetRequiresAuthorization(this ActionDefinition definition, Boolean value)
+        public static ActionDefinition SetRequiresAuthorization(this ActionDefinition definition, bool value)
         {
             definition.SetField("requiresAuthorization", value);
+            return definition;
         }
 
-        public static void SetStealthBreakerBehavior(this ActionDefinition definition, StealthBreakerBehavior value)
+        public static ActionDefinition SetStealthBreakerBehavior(this ActionDefinition definition, StealthBreakerBehavior value)
         {
             definition.SetField("stealthBreakerBehavior", value);
+            return definition;
         }
 
-        public static void SetUsesPerTurn(this ActionDefinition definition, Int32 value)
+        public static ActionDefinition SetUsesPerTurn(this ActionDefinition definition, int value)
         {
             definition.SetField("usesPerTurn", value);
+            return definition;
         }
     }
 }

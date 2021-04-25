@@ -1,29 +1,32 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class DeityDefinitionExtensions
     {
-        public static void SetAlignment(this DeityDefinition definition, String value)
+        public static DeityDefinition SetAlignment(this DeityDefinition definition, string value)
         {
             definition.SetField("alignment", value);
+            return definition;
         }
 
-        public static void SetPersonalityFlagOccurences(this DeityDefinition definition, List<PersonalityFlagOccurence> value)
+        public static DeityDefinition SetPersonalityFlagOccurences(this DeityDefinition definition, List<PersonalityFlagOccurence> value)
         {
             definition.SetField("personalityFlagOccurences", value);
+            return definition;
         }
 
-        public static void SetSelectableByPlayer(this DeityDefinition definition, Boolean value)
+        public static DeityDefinition SetSelectableByPlayer(this DeityDefinition definition, bool value)
         {
             definition.SetField("selectableByPlayer", value);
+            return definition;
         }
 
-        public static void SetSubclasses(this DeityDefinition definition, List<String> value)
+        public static DeityDefinition SetSubclasses(this DeityDefinition definition, List<string> value)
         {
             definition.SetField("subclasses", value);
+            return definition;
         }
     }
 }

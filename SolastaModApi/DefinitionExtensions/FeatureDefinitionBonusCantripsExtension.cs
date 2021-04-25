@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionBonusCantripsExtensions
     {
-        public static void SetBonusCantrips(this FeatureDefinitionBonusCantrips definition, List<SpellDefinition> value)
+        public static FeatureDefinitionBonusCantrips SetBonusCantrips(this FeatureDefinitionBonusCantrips definition, List<SpellDefinition> value)
         {
             definition.SetField("bonusCantrips", value);
+            return definition;
         }
     }
 }

@@ -1,7 +1,6 @@
 using SolastaModApi.Infrastructure;
 using AK.Wwise;
 using UnityEngine.AddressableAssets;
-using System;
 using System.Collections.Generic;
 using static CampaignDefinition;
 
@@ -9,74 +8,88 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class LocationDefinitionExtensions
     {
-        public static void SetAlwaysHidden(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetAlwaysHidden(this LocationDefinition definition, bool value)
         {
             definition.SetField("alwaysHidden", value);
+            return definition;
         }
 
-        public static void SetAudioState(this LocationDefinition definition, State value)
+        public static LocationDefinition SetAudioState(this LocationDefinition definition, State value)
         {
             definition.SetField("audioState", value);
+            return definition;
         }
 
-        public static void SetChallengeRating(this LocationDefinition definition, Int32 value)
+        public static LocationDefinition SetChallengeRating(this LocationDefinition definition, int value)
         {
             definition.SetField("challengeRating", value);
+            return definition;
         }
 
-        public static void SetFocusWhenRevealed(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetFocusWhenRevealed(this LocationDefinition definition, bool value)
         {
             definition.SetField("focusWhenRevealed", value);
+            return definition;
         }
 
-        public static void SetIgnoredByScavengers(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetIgnoredByScavengers(this LocationDefinition definition, bool value)
         {
             definition.SetField("ignoredByScavengers", value);
+            return definition;
         }
 
-        public static void SetIsUserLocation(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetIsUserLocation(this LocationDefinition definition, bool value)
         {
             definition.SetField("isUserLocation", value);
+            return definition;
         }
 
-        public static void SetKeepSectorCullingResultsWhenInactive(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetKeepSectorCullingResultsWhenInactive(this LocationDefinition definition, bool value)
         {
             definition.SetField("keepSectorCullingResultsWhenInactive", value);
+            return definition;
         }
 
-        public static void SetLocationPresentation(this LocationDefinition definition, LocationPresentation value)
+        public static LocationDefinition SetLocationPresentation(this LocationDefinition definition, LocationPresentation value)
         {
             definition.SetField("locationPresentation", value);
+            return definition;
         }
 
-        public static void SetRegisteredFactions(this LocationDefinition definition, List<FactionRegistration> value)
+        public static LocationDefinition SetRegisteredFactions(this LocationDefinition definition, List<FactionRegistration> value)
         {
             definition.SetField("registeredFactions", value);
+            return definition;
         }
 
-        public static void SetRegisteredVariables(this LocationDefinition definition, List<VariableRegistrationDescription> value)
+        public static LocationDefinition SetRegisteredVariables(this LocationDefinition definition, List<VariableRegistrationDescription> value)
         {
             definition.SetField("registeredVariables", value);
+            return definition;
         }
 
-        public static void SetSceneFilePath(this LocationDefinition definition, String value)
+        public static LocationDefinition SetSceneFilePath(this LocationDefinition definition, string value)
         {
             definition.SetField("sceneFilePath", value);
+            return definition;
         }
 
-        public static void SetSceneReference(this LocationDefinition definition, AssetReference value)
+        public static LocationDefinition SetSceneReference(this LocationDefinition definition, AssetReference value)
         {
             definition.SetField("sceneReference", value);
+            return definition;
         }
 
-        public static void SetSetCurrentCampaignNodeWhenLeaving(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetSetCurrentCampaignNodeWhenLeaving(this LocationDefinition definition, bool value)
         {
             definition.SetField("setCurrentCampaignNodeWhenLeaving", value);
+            return definition;
         }
 
-        public static void SetStartsWithScavengerCamp(this LocationDefinition definition, Boolean value)
+        public static LocationDefinition SetStartsWithScavengerCamp(this LocationDefinition definition, bool value)
         {
             definition.SetField("startsWithScavengerCamp", value);
+            return definition;
         }
     }
 }

@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 using static RuleDefinitions;
 
@@ -7,244 +6,292 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class CharacterTemplateDefinitionExtensions
     {
-        public static void SetAbilityScores(this CharacterTemplateDefinition definition, Int32[] value)
+        public static CharacterTemplateDefinition SetAbilityScores(this CharacterTemplateDefinition definition, int[] value)
         {
             definition.SetField("abilityScores", value);
+            return definition;
         }
 
-        public static void SetAge(this CharacterTemplateDefinition definition, Int32 value)
+        public static CharacterTemplateDefinition SetAge(this CharacterTemplateDefinition definition, int value)
         {
             definition.SetField("age", value);
+            return definition;
         }
 
-        public static void SetAgeMorphotypeValue(this CharacterTemplateDefinition definition, Single value)
+        public static CharacterTemplateDefinition SetAgeMorphotypeValue(this CharacterTemplateDefinition definition, float value)
         {
             definition.SetField("ageMorphotypeValue", value);
+            return definition;
         }
 
-        public static void SetAlignment(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetAlignment(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("alignment", value);
+            return definition;
         }
 
-        public static void SetAlignmentPersonalityFlag1(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetAlignmentPersonalityFlag1(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("alignmentPersonalityFlag1", value);
+            return definition;
         }
 
-        public static void SetAlignmentPersonalityFlag2(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetAlignmentPersonalityFlag2(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("alignmentPersonalityFlag2", value);
+            return definition;
         }
 
-        public static void SetAutomateAbilityScoreIncreases(this CharacterTemplateDefinition definition, Boolean value)
+        public static CharacterTemplateDefinition SetAutomateAbilityScoreIncreases(this CharacterTemplateDefinition definition, bool value)
         {
             definition.SetField("automateAbilityScoreIncreases", value);
+            return definition;
         }
 
-        public static void SetBackground(this CharacterTemplateDefinition definition, CharacterBackgroundDefinition value)
+        public static CharacterTemplateDefinition SetBackground(this CharacterTemplateDefinition definition, CharacterBackgroundDefinition value)
         {
             definition.SetField("background", value);
+            return definition;
         }
 
-        public static void SetBackgroundPersonalityFlag1(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetBackgroundPersonalityFlag1(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("backgroundPersonalityFlag1", value);
+            return definition;
         }
 
-        public static void SetBackgroundPersonalityFlag2(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetBackgroundPersonalityFlag2(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("backgroundPersonalityFlag2", value);
+            return definition;
         }
 
-        public static void SetBeardShapeMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetBeardShapeMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("beardShapeMorphotype", value);
+            return definition;
         }
 
-        public static void SetBodyDecorationMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetBodyDecorationMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("bodyDecorationMorphotype", value);
+            return definition;
         }
 
-        public static void SetCharacterLevel(this CharacterTemplateDefinition definition, Int32 value)
+        public static CharacterTemplateDefinition SetCharacterLevel(this CharacterTemplateDefinition definition, int value)
         {
             definition.SetField("characterLevel", value);
+            return definition;
         }
 
-        public static void SetDeity(this CharacterTemplateDefinition definition, DeityDefinition value)
+        public static CharacterTemplateDefinition SetDeity(this CharacterTemplateDefinition definition, DeityDefinition value)
         {
             definition.SetField("deity", value);
+            return definition;
         }
 
-        public static void SetEditorOnly(this CharacterTemplateDefinition definition, Boolean value)
+        public static CharacterTemplateDefinition SetEditorOnly(this CharacterTemplateDefinition definition, bool value)
         {
             definition.SetField("editorOnly", value);
+            return definition;
         }
 
-        public static void SetEquipment(this CharacterTemplateDefinition definition, List<ItemDefinition> value)
+        public static CharacterTemplateDefinition SetEquipment(this CharacterTemplateDefinition definition, List<ItemDefinition> value)
         {
             definition.SetField("equipment", value);
+            return definition;
         }
 
-        public static void SetExpertisesOverride(this CharacterTemplateDefinition definition, List<String> value)
+        public static CharacterTemplateDefinition SetExpertisesOverride(this CharacterTemplateDefinition definition, List<string> value)
         {
             definition.SetField("expertisesOverride", value);
+            return definition;
         }
 
-        public static void SetEyeColorMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetEyeColorMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("eyeColorMorphotype", value);
+            return definition;
         }
 
-        public static void SetFacePath(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetFacePath(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("facePath", value);
+            return definition;
         }
 
-        public static void SetFaceShapeMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetFaceShapeMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("faceShapeMorphotype", value);
+            return definition;
         }
 
-        public static void SetFeatsOverride(this CharacterTemplateDefinition definition, List<String> value)
+        public static CharacterTemplateDefinition SetFeatsOverride(this CharacterTemplateDefinition definition, List<string> value)
         {
             definition.SetField("featsOverride", value);
+            return definition;
         }
 
-        public static void SetFightingStyle(this CharacterTemplateDefinition definition, FightingStyleDefinition value)
+        public static CharacterTemplateDefinition SetFightingStyle(this CharacterTemplateDefinition definition, FightingStyleDefinition value)
         {
             definition.SetField("fightingStyle", value);
+            return definition;
         }
 
-        public static void SetFirstName(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetFirstName(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("firstName", value);
+            return definition;
         }
 
-        public static void SetHairColorMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetHairColorMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("hairColorMorphotype", value);
+            return definition;
         }
 
-        public static void SetHairShapeMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetHairShapeMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("hairShapeMorphotype", value);
+            return definition;
         }
 
-        public static void SetKnownClassCantrips(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetKnownClassCantrips(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("knownClassCantrips", value);
+            return definition;
         }
 
-        public static void SetKnownClassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetKnownClassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("knownClassSpells", value);
+            return definition;
         }
 
-        public static void SetKnownRaceCantrips(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetKnownRaceCantrips(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("knownRaceCantrips", value);
+            return definition;
         }
 
-        public static void SetKnownRaceSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetKnownRaceSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("knownRaceSpells", value);
+            return definition;
         }
 
-        public static void SetKnownSubclassCantrips(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetKnownSubclassCantrips(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("knownSubclassCantrips", value);
+            return definition;
         }
 
-        public static void SetKnownSubclassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetKnownSubclassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("knownSubclassSpells", value);
+            return definition;
         }
 
-        public static void SetLanguagesOverride(this CharacterTemplateDefinition definition, List<String> value)
+        public static CharacterTemplateDefinition SetLanguagesOverride(this CharacterTemplateDefinition definition, List<string> value)
         {
             definition.SetField("languagesOverride", value);
+            return definition;
         }
 
-        public static void SetMainClass(this CharacterTemplateDefinition definition, CharacterClassDefinition value)
+        public static CharacterTemplateDefinition SetMainClass(this CharacterTemplateDefinition definition, CharacterClassDefinition value)
         {
             definition.SetField("mainClass", value);
+            return definition;
         }
 
-        public static void SetMainRace(this CharacterTemplateDefinition definition, CharacterRaceDefinition value)
+        public static CharacterTemplateDefinition SetMainRace(this CharacterTemplateDefinition definition, CharacterRaceDefinition value)
         {
             definition.SetField("mainRace", value);
+            return definition;
         }
 
-        public static void SetMusculatureMorphotypeValue(this CharacterTemplateDefinition definition, Single value)
+        public static CharacterTemplateDefinition SetMusculatureMorphotypeValue(this CharacterTemplateDefinition definition, float value)
         {
             definition.SetField("musculatureMorphotypeValue", value);
+            return definition;
         }
 
-        public static void SetOriginMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetOriginMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("originMorphotype", value);
+            return definition;
         }
 
-        public static void SetPreparedClassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetPreparedClassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("preparedClassSpells", value);
+            return definition;
         }
 
-        public static void SetPreparedSubclassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
+        public static CharacterTemplateDefinition SetPreparedSubclassSpells(this CharacterTemplateDefinition definition, List<SpellDefinition> value)
         {
             definition.SetField("preparedSubclassSpells", value);
+            return definition;
         }
 
-        public static void SetSex(this CharacterTemplateDefinition definition, CreatureSex value)
+        public static CharacterTemplateDefinition SetSex(this CharacterTemplateDefinition definition, CreatureSex value)
         {
             definition.SetField("sex", value);
+            return definition;
         }
 
-        public static void SetSkillsOverride(this CharacterTemplateDefinition definition, List<String> value)
+        public static CharacterTemplateDefinition SetSkillsOverride(this CharacterTemplateDefinition definition, List<string> value)
         {
             definition.SetField("skillsOverride", value);
+            return definition;
         }
 
-        public static void SetSkinMorphotype(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetSkinMorphotype(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("skinMorphotype", value);
+            return definition;
         }
 
-        public static void SetStartingMoney(this CharacterTemplateDefinition definition, Int32[] value)
+        public static CharacterTemplateDefinition SetStartingMoney(this CharacterTemplateDefinition definition, int[] value)
         {
             definition.SetField("startingMoney", value);
+            return definition;
         }
 
-        public static void SetSubClass(this CharacterTemplateDefinition definition, CharacterSubclassDefinition value)
+        public static CharacterTemplateDefinition SetSubClass(this CharacterTemplateDefinition definition, CharacterSubclassDefinition value)
         {
             definition.SetField("subClass", value);
+            return definition;
         }
 
-        public static void SetSubRace(this CharacterTemplateDefinition definition, CharacterRaceDefinition value)
+        public static CharacterTemplateDefinition SetSubRace(this CharacterTemplateDefinition definition, CharacterRaceDefinition value)
         {
             definition.SetField("subRace", value);
+            return definition;
         }
 
-        public static void SetSurName(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetSurName(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("surName", value);
+            return definition;
         }
 
-        public static void SetToolsOverride(this CharacterTemplateDefinition definition, List<String> value)
+        public static CharacterTemplateDefinition SetToolsOverride(this CharacterTemplateDefinition definition, List<string> value)
         {
             definition.SetField("toolsOverride", value);
+            return definition;
         }
 
-        public static void SetVoiceId(this CharacterTemplateDefinition definition, String value)
+        public static CharacterTemplateDefinition SetVoiceId(this CharacterTemplateDefinition definition, string value)
         {
             definition.SetField("voiceId", value);
+            return definition;
         }
 
-        public static void SetWieldedItemsConfigurations(this CharacterTemplateDefinition definition, List<WieldedItemsConfiguration> value)
+        public static CharacterTemplateDefinition SetWieldedItemsConfigurations(this CharacterTemplateDefinition definition, List<WieldedItemsConfiguration> value)
         {
             definition.SetField("wieldedItemsConfigurations", value);
+            return definition;
         }
     }
 }

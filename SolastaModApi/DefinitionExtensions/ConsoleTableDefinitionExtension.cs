@@ -1,34 +1,38 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class ConsoleTableDefinitionExtensions
     {
-        public static void SetIndentWidth(this ConsoleTableDefinition definition, Single value)
+        public static ConsoleTableDefinition SetIndentWidth(this ConsoleTableDefinition definition, float value)
         {
             definition.SetField("indentWidth", value);
+            return definition;
         }
 
-        public static void SetLineHeight(this ConsoleTableDefinition definition, Single value)
+        public static ConsoleTableDefinition SetLineHeight(this ConsoleTableDefinition definition, float value)
         {
             definition.SetField("lineHeight", value);
+            return definition;
         }
 
-        public static void SetLineSpacing(this ConsoleTableDefinition definition, Single value)
+        public static ConsoleTableDefinition SetLineSpacing(this ConsoleTableDefinition definition, float value)
         {
             definition.SetField("lineSpacing", value);
+            return definition;
         }
 
-        public static void SetStyleDuplets(this ConsoleTableDefinition definition, List<ConsoleStyleDuplet> value)
+        public static ConsoleTableDefinition SetStyleDuplets(this ConsoleTableDefinition definition, List<ConsoleStyleDuplet> value)
         {
             definition.SetField("styleDuplets", value);
+            return definition;
         }
 
-        public static void SetWordSpacing(this ConsoleTableDefinition definition, Single value)
+        public static ConsoleTableDefinition SetWordSpacing(this ConsoleTableDefinition definition, float value)
         {
             definition.SetField("wordSpacing", value);
+            return definition;
         }
     }
 }

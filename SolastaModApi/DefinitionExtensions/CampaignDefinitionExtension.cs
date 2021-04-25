@@ -1,6 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System;
 using System.Collections.Generic;
 using static CampaignDefinition;
 
@@ -8,134 +7,160 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class CampaignDefinitionExtensions
     {
-        public static void SetAutoGameplayRoles(this CampaignDefinition definition, List<GameplayRoleFilter> value)
+        public static CampaignDefinition SetAutoGameplayRoles(this CampaignDefinition definition, List<GameplayRoleFilter> value)
         {
             definition.SetField("autoGameplayRoles", value);
+            return definition;
         }
 
-        public static void SetCalendar(this CampaignDefinition definition, CalendarDefinition value)
+        public static CampaignDefinition SetCalendar(this CampaignDefinition definition, CalendarDefinition value)
         {
             definition.SetField("calendar", value);
+            return definition;
         }
 
-        public static void SetEditorOnly(this CampaignDefinition definition, Boolean value)
+        public static CampaignDefinition SetEditorOnly(this CampaignDefinition definition, bool value)
         {
             definition.SetField("editorOnly", value);
+            return definition;
         }
 
-        public static void SetGraphicsCampaignMapReference(this CampaignDefinition definition, AssetReference value)
+        public static CampaignDefinition SetGraphicsCampaignMapReference(this CampaignDefinition definition, AssetReference value)
         {
             definition.SetField("graphicsCampaignMapReference", value);
+            return definition;
         }
 
-        public static void SetInitialBestiaryContent(this CampaignDefinition definition, List<MonsterKnowledgeDescription> value)
+        public static CampaignDefinition SetInitialBestiaryContent(this CampaignDefinition definition, List<MonsterKnowledgeDescription> value)
         {
             definition.SetField("initialBestiaryContent", value);
+            return definition;
         }
 
-        public static void SetInitialPartyPosition(this CampaignDefinition definition, String value)
+        public static CampaignDefinition SetInitialPartyPosition(this CampaignDefinition definition, string value)
         {
             definition.SetField("initialPartyPosition", value);
+            return definition;
         }
 
-        public static void SetInsideLocation(this CampaignDefinition definition, String value)
+        public static CampaignDefinition SetInsideLocation(this CampaignDefinition definition, string value)
         {
             definition.SetField("insideLocation", value);
+            return definition;
         }
 
-        public static void SetIntroductionCaptions(this CampaignDefinition definition, List<String> value)
+        public static CampaignDefinition SetIntroductionCaptions(this CampaignDefinition definition, List<string> value)
         {
             definition.SetField("introductionCaptions", value);
+            return definition;
         }
 
-        public static void SetIntroMovieDefinition(this CampaignDefinition definition, MoviePlaybackDefinition value)
+        public static CampaignDefinition SetIntroMovieDefinition(this CampaignDefinition definition, MoviePlaybackDefinition value)
         {
             definition.SetField("introMovieDefinition", value);
+            return definition;
         }
 
-        public static void SetIsUserCampaign(this CampaignDefinition definition, Boolean value)
+        public static CampaignDefinition SetIsUserCampaign(this CampaignDefinition definition, bool value)
         {
             definition.SetField("isUserCampaign", value);
+            return definition;
         }
 
-        public static void SetJournalStart(this CampaignDefinition definition, String value)
+        public static CampaignDefinition SetJournalStart(this CampaignDefinition definition, string value)
         {
             definition.SetField("journalStart", value);
+            return definition;
         }
 
-        public static void SetKnownRecipes(this CampaignDefinition definition, List<RecipeDefinition> value)
+        public static CampaignDefinition SetKnownRecipes(this CampaignDefinition definition, List<RecipeDefinition> value)
         {
             definition.SetField("knownRecipes", value);
+            return definition;
         }
 
-        public static void SetMaxLevel(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetMaxLevel(this CampaignDefinition definition, int value)
         {
             definition.SetField("maxLevel", value);
+            return definition;
         }
 
-        public static void SetMinLevel(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetMinLevel(this CampaignDefinition definition, int value)
         {
             definition.SetField("minLevel", value);
+            return definition;
         }
 
-        public static void SetPartySize(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetPartySize(this CampaignDefinition definition, int value)
         {
             definition.SetField("partySize", value);
+            return definition;
         }
 
-        public static void SetPredefinedParty(this CampaignDefinition definition, List<String> value)
+        public static CampaignDefinition SetPredefinedParty(this CampaignDefinition definition, List<string> value)
         {
             definition.SetField("predefinedParty", value);
+            return definition;
         }
 
-        public static void SetRegisteredFactions(this CampaignDefinition definition, List<FactionRegistration> value)
+        public static CampaignDefinition SetRegisteredFactions(this CampaignDefinition definition, List<FactionRegistration> value)
         {
             definition.SetField("registeredFactions", value);
+            return definition;
         }
 
-        public static void SetRegisteredVariables(this CampaignDefinition definition, List<VariableRegistrationDescription> value)
+        public static CampaignDefinition SetRegisteredVariables(this CampaignDefinition definition, List<VariableRegistrationDescription> value)
         {
             definition.SetField("registeredVariables", value);
+            return definition;
         }
 
-        public static void SetRenderSettingsSceneProfile(this CampaignDefinition definition, RenderSettingsSceneProfile value)
+        public static CampaignDefinition SetRenderSettingsSceneProfile(this CampaignDefinition definition, RenderSettingsSceneProfile value)
         {
             definition.SetField("renderSettingsSceneProfile", value);
+            return definition;
         }
 
-        public static void SetSceneFilePath(this CampaignDefinition definition, String value)
+        public static CampaignDefinition SetSceneFilePath(this CampaignDefinition definition, string value)
         {
             definition.SetField("sceneFilePath", value);
+            return definition;
         }
 
-        public static void SetSceneReference(this CampaignDefinition definition, AssetReference value)
+        public static CampaignDefinition SetSceneReference(this CampaignDefinition definition, AssetReference value)
         {
             definition.SetField("sceneReference", value);
+            return definition;
         }
 
-        public static void SetStartDay(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetStartDay(this CampaignDefinition definition, int value)
         {
             definition.SetField("startDay", value);
+            return definition;
         }
 
-        public static void SetStartHour(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetStartHour(this CampaignDefinition definition, int value)
         {
             definition.SetField("startHour", value);
+            return definition;
         }
 
-        public static void SetStartingQuests(this CampaignDefinition definition, List<QuestTreeDefinition> value)
+        public static CampaignDefinition SetStartingQuests(this CampaignDefinition definition, List<QuestTreeDefinition> value)
         {
             definition.SetField("startingQuests", value);
+            return definition;
         }
 
-        public static void SetStartMonth(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetStartMonth(this CampaignDefinition definition, int value)
         {
             definition.SetField("startMonth", value);
+            return definition;
         }
 
-        public static void SetStartYear(this CampaignDefinition definition, Int32 value)
+        public static CampaignDefinition SetStartYear(this CampaignDefinition definition, int value)
         {
             definition.SetField("startYear", value);
+            return definition;
         }
     }
 }

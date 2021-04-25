@@ -1,11 +1,4 @@
-﻿using HarmonyLib;
-using TA.AI;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-using System.Collections.Generic;
-using static CharacterClassDefinition;
-
-namespace SolastaModApi
+﻿namespace SolastaModApi
 {
     public class ClassBuilder : CharacterClassDefinitionBuilder
     {

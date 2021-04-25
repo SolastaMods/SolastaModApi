@@ -1,34 +1,38 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionAttributeModifierExtensions
     {
-        public static void SetModifiedAttribute(this FeatureDefinitionAttributeModifier definition, String value)
+        public static FeatureDefinitionAttributeModifier SetModifiedAttribute(this FeatureDefinitionAttributeModifier definition, string value)
         {
             definition.SetField("modifiedAttribute", value);
+            return definition;
         }
 
-        public static void SetModifierType(this FeatureDefinitionAttributeModifier definition, FeatureDefinitionAttributeModifier.AttributeModifierOperationOld value)
+        public static FeatureDefinitionAttributeModifier SetModifierType(this FeatureDefinitionAttributeModifier definition, FeatureDefinitionAttributeModifier.AttributeModifierOperationOld value)
         {
             definition.SetField("modifierType", value);
+            return definition;
         }
 
-        public static void SetModifierType2(this FeatureDefinitionAttributeModifier definition, FeatureDefinitionAttributeModifier.AttributeModifierOperation value)
+        public static FeatureDefinitionAttributeModifier SetModifierType2(this FeatureDefinitionAttributeModifier definition, FeatureDefinitionAttributeModifier.AttributeModifierOperation value)
         {
             definition.SetField("modifierType2", value);
+            return definition;
         }
 
-        public static void SetModifierValue(this FeatureDefinitionAttributeModifier definition, Int32 value)
+        public static FeatureDefinitionAttributeModifier SetModifierValue(this FeatureDefinitionAttributeModifier definition, int value)
         {
             definition.SetField("modifierValue", value);
+            return definition;
         }
 
-        public static void SetSituationalContext(this FeatureDefinitionAttributeModifier definition, SituationalContext value)
+        public static FeatureDefinitionAttributeModifier SetSituationalContext(this FeatureDefinitionAttributeModifier definition, SituationalContext value)
         {
             definition.SetField("situationalContext", value);
+            return definition;
         }
     }
 }

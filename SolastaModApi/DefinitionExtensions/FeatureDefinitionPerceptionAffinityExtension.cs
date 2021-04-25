@@ -1,34 +1,38 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionPerceptionAffinityExtensions
     {
-        public static void SetCannotBeSurprised(this FeatureDefinitionPerceptionAffinity definition, Boolean value)
+        public static FeatureDefinitionPerceptionAffinity SetCannotBeSurprised(this FeatureDefinitionPerceptionAffinity definition, bool value)
         {
             definition.SetField("cannotBeSurprised", value);
+            return definition;
         }
 
-        public static void SetCharacterFamilyRevealed(this FeatureDefinitionPerceptionAffinity definition, Boolean value)
+        public static FeatureDefinitionPerceptionAffinity SetCharacterFamilyRevealed(this FeatureDefinitionPerceptionAffinity definition, bool value)
         {
             definition.SetField("characterFamilyRevealed", value);
+            return definition;
         }
 
-        public static void SetCharacterPositionRevealed(this FeatureDefinitionPerceptionAffinity definition, Boolean value)
+        public static FeatureDefinitionPerceptionAffinity SetCharacterPositionRevealed(this FeatureDefinitionPerceptionAffinity definition, bool value)
         {
             definition.SetField("characterPositionRevealed", value);
+            return definition;
         }
 
-        public static void SetImpairedSight(this FeatureDefinitionPerceptionAffinity definition, Boolean value)
+        public static FeatureDefinitionPerceptionAffinity SetImpairedSight(this FeatureDefinitionPerceptionAffinity definition, bool value)
         {
             definition.SetField("impairedSight", value);
+            return definition;
         }
 
-        public static void SetRequiredSensesToPerceive(this FeatureDefinitionPerceptionAffinity definition, List<SenseMode.Type> value)
+        public static FeatureDefinitionPerceptionAffinity SetRequiredSensesToPerceive(this FeatureDefinitionPerceptionAffinity definition, List<SenseMode.Type> value)
         {
             definition.SetField("requiredSensesToPerceive", value);
+            return definition;
         }
     }
 }

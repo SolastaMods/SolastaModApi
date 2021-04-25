@@ -1,39 +1,44 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionDieRollModifierExtensions
     {
-        public static void SetMaxRollValue(this FeatureDefinitionDieRollModifier definition, Int32 value)
+        public static FeatureDefinitionDieRollModifier SetMaxRollValue(this FeatureDefinitionDieRollModifier definition, int value)
         {
             definition.SetField("maxRollValue", value);
+            return definition;
         }
 
-        public static void SetMinRerollValue(this FeatureDefinitionDieRollModifier definition, Int32 value)
+        public static FeatureDefinitionDieRollModifier SetMinRerollValue(this FeatureDefinitionDieRollModifier definition, int value)
         {
             definition.SetField("minRerollValue", value);
+            return definition;
         }
 
-        public static void SetMinRollValue(this FeatureDefinitionDieRollModifier definition, Int32 value)
+        public static FeatureDefinitionDieRollModifier SetMinRollValue(this FeatureDefinitionDieRollModifier definition, int value)
         {
             definition.SetField("minRollValue", value);
+            return definition;
         }
 
-        public static void SetRerollCount(this FeatureDefinitionDieRollModifier definition, Int32 value)
+        public static FeatureDefinitionDieRollModifier SetRerollCount(this FeatureDefinitionDieRollModifier definition, int value)
         {
             definition.SetField("rerollCount", value);
+            return definition;
         }
 
-        public static void SetRerollLocalizationKey(this FeatureDefinitionDieRollModifier definition, String value)
+        public static FeatureDefinitionDieRollModifier SetRerollLocalizationKey(this FeatureDefinitionDieRollModifier definition, string value)
         {
             definition.SetField("rerollLocalizationKey", value);
+            return definition;
         }
 
-        public static void SetValidityContext(this FeatureDefinitionDieRollModifier definition, RollContext value)
+        public static FeatureDefinitionDieRollModifier SetValidityContext(this FeatureDefinitionDieRollModifier definition, RollContext value)
         {
             definition.SetField("validityContext", value);
+            return definition;
         }
     }
 }

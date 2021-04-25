@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 using static RuleDefinitions;
 
@@ -7,134 +6,160 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionMagicAffinityExtensions
     {
-        public static void SetAdditionalScribedSpells(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetAdditionalScribedSpells(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("additionalScribedSpells", value);
+            return definition;
         }
 
-        public static void SetCanFailSpellcasting(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetCanFailSpellcasting(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("canFailSpellcasting", value);
+            return definition;
         }
 
-        public static void SetCanUseProficientWeaponAsFocus(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetCanUseProficientWeaponAsFocus(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("canUseProficientWeaponAsFocus", value);
+            return definition;
         }
 
-        public static void SetConcentrationAdvantage(this FeatureDefinitionMagicAffinity definition, AdvantageType value)
+        public static FeatureDefinitionMagicAffinity SetConcentrationAdvantage(this FeatureDefinitionMagicAffinity definition, AdvantageType value)
         {
             definition.SetField("concentrationAdvantage", value);
+            return definition;
         }
 
-        public static void SetDeviceTagsAutoIdentifying(this FeatureDefinitionMagicAffinity definition, List<String> value)
+        public static FeatureDefinitionMagicAffinity SetDeviceTagsAutoIdentifying(this FeatureDefinitionMagicAffinity definition, List<string> value)
         {
             definition.SetField("deviceTagsAutoIdentifying", value);
+            return definition;
         }
 
-        public static void SetExtendedSpellList(this FeatureDefinitionMagicAffinity definition, SpellListDefinition value)
+        public static FeatureDefinitionMagicAffinity SetExtendedSpellList(this FeatureDefinitionMagicAffinity definition, SpellListDefinition value)
         {
             definition.SetField("extendedSpellList", value);
+            return definition;
         }
 
-        public static void SetForcedSavingThrowAffinity(this FeatureDefinitionMagicAffinity definition, AdvantageType value)
+        public static FeatureDefinitionMagicAffinity SetForcedSavingThrowAffinity(this FeatureDefinitionMagicAffinity definition, AdvantageType value)
         {
             definition.SetField("forcedSavingThrowAffinity", value);
+            return definition;
         }
 
-        public static void SetForcedSpellDefinition(this FeatureDefinitionMagicAffinity definition, SpellDefinition value)
+        public static FeatureDefinitionMagicAffinity SetForcedSpellDefinition(this FeatureDefinitionMagicAffinity definition, SpellDefinition value)
         {
             definition.SetField("forcedSpellDefinition", value);
+            return definition;
         }
 
-        public static void SetForceHalfDamageOnCantrips(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetForceHalfDamageOnCantrips(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("forceHalfDamageOnCantrips", value);
+            return definition;
         }
 
-        public static void SetImpairedSpeech(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetImpairedSpeech(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("impairedSpeech", value);
+            return definition;
         }
 
-        public static void SetMaxPreparedSpellsModifier(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetMaxPreparedSpellsModifier(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("maxPreparedSpellsModifier", value);
+            return definition;
         }
 
-        public static void SetOverConcentrationThreshold(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetOverConcentrationThreshold(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("overConcentrationThreshold", value);
+            return definition;
         }
 
-        public static void SetRangeSpellNoProximityPenalty(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetRangeSpellNoProximityPenalty(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("rangeSpellNoProximityPenalty", value);
+            return definition;
         }
 
-        public static void SetRitualCasting(this FeatureDefinitionMagicAffinity definition, RitualCasting value)
+        public static FeatureDefinitionMagicAffinity SetRitualCasting(this FeatureDefinitionMagicAffinity definition, RitualCasting value)
         {
             definition.SetField("ritualCasting", value);
+            return definition;
         }
 
-        public static void SetSaveDCModifier(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetSaveDCModifier(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("saveDCModifier", value);
+            return definition;
         }
 
-        public static void SetScribeAdvantageType(this FeatureDefinitionMagicAffinity definition, AdvantageType value)
+        public static FeatureDefinitionMagicAffinity SetScribeAdvantageType(this FeatureDefinitionMagicAffinity definition, AdvantageType value)
         {
             definition.SetField("scribeAdvantageType", value);
+            return definition;
         }
 
-        public static void SetScribeCostMultiplier(this FeatureDefinitionMagicAffinity definition, Single value)
+        public static FeatureDefinitionMagicAffinity SetScribeCostMultiplier(this FeatureDefinitionMagicAffinity definition, float value)
         {
             definition.SetField("scribeCostMultiplier", value);
+            return definition;
         }
 
-        public static void SetScribeDurationMultiplier(this FeatureDefinitionMagicAffinity definition, Single value)
+        public static FeatureDefinitionMagicAffinity SetScribeDurationMultiplier(this FeatureDefinitionMagicAffinity definition, float value)
         {
             definition.SetField("scribeDurationMultiplier", value);
+            return definition;
         }
 
-        public static void SetSomaticWithWeapon(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetSomaticWithWeapon(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("somaticWithWeapon", value);
+            return definition;
         }
 
-        public static void SetSomaticWithWeaponOrShield(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetSomaticWithWeaponOrShield(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("somaticWithWeaponOrShield", value);
+            return definition;
         }
 
-        public static void SetSpellAttackModifier(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetSpellAttackModifier(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("spellAttackModifier", value);
+            return definition;
         }
 
-        public static void SetSpellcastingSuccessDC(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetSpellcastingSuccessDC(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("spellcastingSuccessDC", value);
+            return definition;
         }
 
-        public static void SetSpellImmunities(this FeatureDefinitionMagicAffinity definition, List<String> value)
+        public static FeatureDefinitionMagicAffinity SetSpellImmunities(this FeatureDefinitionMagicAffinity definition, List<string> value)
         {
             definition.SetField("spellImmunities", value);
+            return definition;
         }
 
-        public static void SetUsesWarList(this FeatureDefinitionMagicAffinity definition, Boolean value)
+        public static FeatureDefinitionMagicAffinity SetUsesWarList(this FeatureDefinitionMagicAffinity definition, bool value)
         {
             definition.SetField("usesWarList", value);
+            return definition;
         }
 
-        public static void SetWarListSlotBonus(this FeatureDefinitionMagicAffinity definition, Int32 value)
+        public static FeatureDefinitionMagicAffinity SetWarListSlotBonus(this FeatureDefinitionMagicAffinity definition, int value)
         {
             definition.SetField("warListSlotBonus", value);
+            return definition;
         }
 
-        public static void SetWarListSpells(this FeatureDefinitionMagicAffinity definition, List<String> value)
+        public static FeatureDefinitionMagicAffinity SetWarListSpells(this FeatureDefinitionMagicAffinity definition, List<string> value)
         {
             definition.SetField("warListSpells", value);
+            return definition;
         }
     }
 }

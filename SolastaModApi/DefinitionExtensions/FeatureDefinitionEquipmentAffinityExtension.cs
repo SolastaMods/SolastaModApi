@@ -1,18 +1,19 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionEquipmentAffinityExtensions
     {
-        public static void SetAdditionalCarryingCapacity(this FeatureDefinitionEquipmentAffinity definition, Single value)
+        public static FeatureDefinitionEquipmentAffinity SetAdditionalCarryingCapacity(this FeatureDefinitionEquipmentAffinity definition, float value)
         {
             definition.SetField("additionalCarryingCapacity", value);
+            return definition;
         }
 
-        public static void SetCarryingCapacityMultiplier(this FeatureDefinitionEquipmentAffinity definition, Single value)
+        public static FeatureDefinitionEquipmentAffinity SetCarryingCapacityMultiplier(this FeatureDefinitionEquipmentAffinity definition, float value)
         {
             definition.SetField("carryingCapacityMultiplier", value);
+            return definition;
         }
     }
 }

@@ -1,6 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System;
 using static ActionDefinitions;
 using static RuleDefinitions;
 using static AnimationDefinitions;
@@ -9,119 +8,142 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class MonsterAttackDefinitionExtensions
     {
-        public static void SetActionType(this MonsterAttackDefinition definition, ActionType value)
+        public static MonsterAttackDefinition SetActionType(this MonsterAttackDefinition definition, ActionType value)
         {
             definition.SetField("actionType", value);
+            return definition;
         }
 
-        public static void SetAfterChargeOnly(this MonsterAttackDefinition definition, Boolean value)
+        public static MonsterAttackDefinition SetAfterChargeOnly(this MonsterAttackDefinition definition, bool value)
         {
             definition.SetField("afterChargeOnly", value);
+            return definition;
         }
 
-        public static void SetAnimationTag(this MonsterAttackDefinition definition, String value)
+        public static MonsterAttackDefinition SetAnimationTag(this MonsterAttackDefinition definition, string value)
         {
             definition.SetField("animationTag", value);
+            return definition;
         }
 
-        public static void SetChargeEndParticle(this MonsterAttackDefinition definition, AssetReference value)
+        public static MonsterAttackDefinition SetChargeEndParticle(this MonsterAttackDefinition definition, AssetReference value)
         {
             definition.SetField("chargeEndParticle", value);
+            return definition;
         }
 
-        public static void SetChargeLoopParticle(this MonsterAttackDefinition definition, AssetReference value)
+        public static MonsterAttackDefinition SetChargeLoopParticle(this MonsterAttackDefinition definition, AssetReference value)
         {
             definition.SetField("chargeLoopParticle", value);
+            return definition;
         }
 
-        public static void SetChargePrepareParticle(this MonsterAttackDefinition definition, AssetReference value)
+        public static MonsterAttackDefinition SetChargePrepareParticle(this MonsterAttackDefinition definition, AssetReference value)
         {
             definition.SetField("chargePrepareParticle", value);
+            return definition;
         }
 
-        public static void SetChargeStartParticle(this MonsterAttackDefinition definition, AssetReference value)
+        public static MonsterAttackDefinition SetChargeStartParticle(this MonsterAttackDefinition definition, AssetReference value)
         {
             definition.SetField("chargeStartParticle", value);
+            return definition;
         }
 
-        public static void SetCloseRange(this MonsterAttackDefinition definition, Int32 value)
+        public static MonsterAttackDefinition SetCloseRange(this MonsterAttackDefinition definition, int value)
         {
             definition.SetField("closeRange", value);
+            return definition;
         }
 
-        public static void SetDisplayedInEditor(this MonsterAttackDefinition definition, Boolean value)
+        public static MonsterAttackDefinition SetDisplayedInEditor(this MonsterAttackDefinition definition, bool value)
         {
             definition.SetField("displayedInEditor", value);
+            return definition;
         }
 
-        public static void SetEffectDescription(this MonsterAttackDefinition definition, EffectDescription value)
+        public static MonsterAttackDefinition SetEffectDescription(this MonsterAttackDefinition definition, EffectDescription value)
         {
             definition.SetField("effectDescription", value);
+            return definition;
         }
 
-        public static void SetItemDefinitionMainHand(this MonsterAttackDefinition definition, ItemDefinition value)
+        public static MonsterAttackDefinition SetItemDefinitionMainHand(this MonsterAttackDefinition definition, ItemDefinition value)
         {
             definition.SetField("itemDefinitionMainHand", value);
+            return definition;
         }
 
-        public static void SetItemDefinitionOffHand(this MonsterAttackDefinition definition, ItemDefinition value)
+        public static MonsterAttackDefinition SetItemDefinitionOffHand(this MonsterAttackDefinition definition, ItemDefinition value)
         {
             definition.SetField("itemDefinitionOffHand", value);
+            return definition;
         }
 
-        public static void SetLimitedUse(this MonsterAttackDefinition definition, Boolean value)
+        public static MonsterAttackDefinition SetLimitedUse(this MonsterAttackDefinition definition, bool value)
         {
             definition.SetField("limitedUse", value);
+            return definition;
         }
 
-        public static void SetMaxRange(this MonsterAttackDefinition definition, Int32 value)
+        public static MonsterAttackDefinition SetMaxRange(this MonsterAttackDefinition definition, int value)
         {
             definition.SetField("maxRange", value);
+            return definition;
         }
 
-        public static void SetMaxUses(this MonsterAttackDefinition definition, Int32 value)
+        public static MonsterAttackDefinition SetMaxUses(this MonsterAttackDefinition definition, int value)
         {
             definition.SetField("maxUses", value);
+            return definition;
         }
 
-        public static void SetMethodName(this MonsterAttackDefinition definition, String value)
+        public static MonsterAttackDefinition SetMethodName(this MonsterAttackDefinition definition, string value)
         {
             definition.SetField("methodName", value);
+            return definition;
         }
 
-        public static void SetProjectile(this MonsterAttackDefinition definition, String value)
+        public static MonsterAttackDefinition SetProjectile(this MonsterAttackDefinition definition, string value)
         {
             definition.SetField("projectile", value);
+            return definition;
         }
 
-        public static void SetProjectileBone(this MonsterAttackDefinition definition, BoneType value)
+        public static MonsterAttackDefinition SetProjectileBone(this MonsterAttackDefinition definition, BoneType value)
         {
             definition.SetField("projectileBone", value);
+            return definition;
         }
 
-        public static void SetProximity(this MonsterAttackDefinition definition, AttackProximity value)
+        public static MonsterAttackDefinition SetProximity(this MonsterAttackDefinition definition, AttackProximity value)
         {
             definition.SetField("proximity", value);
+            return definition;
         }
 
-        public static void SetReachRange(this MonsterAttackDefinition definition, Int32 value)
+        public static MonsterAttackDefinition SetReachRange(this MonsterAttackDefinition definition, int value)
         {
             definition.SetField("reachRange", value);
+            return definition;
         }
 
-        public static void SetSoundEffectOnHitDescription(this MonsterAttackDefinition definition, SoundEffectOnHitDescription value)
+        public static MonsterAttackDefinition SetSoundEffectOnHitDescription(this MonsterAttackDefinition definition, SoundEffectOnHitDescription value)
         {
             definition.SetField("soundEffectOnHitDescription", value);
+            return definition;
         }
 
-        public static void SetToHitBonus(this MonsterAttackDefinition definition, Int32 value)
+        public static MonsterAttackDefinition SetToHitBonus(this MonsterAttackDefinition definition, int value)
         {
             definition.SetField("toHitBonus", value);
+            return definition;
         }
 
-        public static void SetUseAnimationTag(this MonsterAttackDefinition definition, Boolean value)
+        public static MonsterAttackDefinition SetUseAnimationTag(this MonsterAttackDefinition definition, bool value)
         {
             definition.SetField("useAnimationTag", value);
+            return definition;
         }
     }
 }

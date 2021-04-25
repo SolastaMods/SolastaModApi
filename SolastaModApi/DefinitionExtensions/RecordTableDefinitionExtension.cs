@@ -1,43 +1,49 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class RecordTableDefinitionExtensions
     {
-        public static void SetAreaWidth(this RecordTableDefinition definition, Single value)
+        public static RecordTableDefinition SetAreaWidth(this RecordTableDefinition definition, float value)
         {
             definition.SetField("areaWidth", value);
+            return definition;
         }
 
-        public static void SetLayout(this RecordTableDefinition definition, RecordTableDefinition.LayoutType value)
+        public static RecordTableDefinition SetLayout(this RecordTableDefinition definition, RecordTableDefinition.LayoutType value)
         {
             definition.SetField("layout", value);
+            return definition;
         }
 
-        public static void SetMaxEntries(this RecordTableDefinition definition, Int32 value)
+        public static RecordTableDefinition SetMaxEntries(this RecordTableDefinition definition, int value)
         {
             definition.SetField("maxEntries", value);
+            return definition;
         }
 
-        public static void SetMaxSerializedEntries(this RecordTableDefinition definition, Int32 value)
+        public static RecordTableDefinition SetMaxSerializedEntries(this RecordTableDefinition definition, int value)
         {
             definition.SetField("maxSerializedEntries", value);
+            return definition;
         }
 
-        public static void SetOffsetX(this RecordTableDefinition definition, Single value)
+        public static RecordTableDefinition SetOffsetX(this RecordTableDefinition definition, float value)
         {
             definition.SetField("offsetX", value);
+            return definition;
         }
 
-        public static void SetOffsetY(this RecordTableDefinition definition, Single value)
+        public static RecordTableDefinition SetOffsetY(this RecordTableDefinition definition, float value)
         {
             definition.SetField("offsetY", value);
+            return definition;
         }
 
-        public static void SetSpacing(this RecordTableDefinition definition, Single value)
+        public static RecordTableDefinition SetSpacing(this RecordTableDefinition definition, float value)
         {
             definition.SetField("spacing", value);
+            return definition;
         }
     }
 }

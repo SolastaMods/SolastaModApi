@@ -1,34 +1,38 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class WieldingConfigurationDescriptionExtensions
     {
-        public static void SetAnimationTag(this WieldingConfigurationDescription definition, String value)
+        public static WieldingConfigurationDescription SetAnimationTag(this WieldingConfigurationDescription definition, string value)
         {
             definition.SetField("animationTag", value);
+            return definition;
         }
 
-        public static void SetSecondaryAnimationTag(this WieldingConfigurationDescription definition, String value)
+        public static WieldingConfigurationDescription SetSecondaryAnimationTag(this WieldingConfigurationDescription definition, string value)
         {
             definition.SetField("secondaryAnimationTag", value);
+            return definition;
         }
 
-        public static void SetSoundEffectDescription(this WieldingConfigurationDescription definition, SoundEffectDescription value)
+        public static WieldingConfigurationDescription SetSoundEffectDescription(this WieldingConfigurationDescription definition, SoundEffectDescription value)
         {
             definition.SetField("soundEffectDescription", value);
+            return definition;
         }
 
-        public static void SetWeaponCategory(this WieldingConfigurationDescription definition, String value)
+        public static WieldingConfigurationDescription SetWeaponCategory(this WieldingConfigurationDescription definition, string value)
         {
             definition.SetField("weaponCategory", value);
+            return definition;
         }
 
-        public static void SetWeaponProximity(this WieldingConfigurationDescription definition, AttackProximity value)
+        public static WieldingConfigurationDescription SetWeaponProximity(this WieldingConfigurationDescription definition, AttackProximity value)
         {
             definition.SetField("weaponProximity", value);
+            return definition;
         }
     }
 }

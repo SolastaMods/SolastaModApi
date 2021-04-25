@@ -1,35 +1,39 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FactionDefinitionExtensions
     {
-        public static void SetBuiltIn(this FactionDefinition definition, Boolean value)
+        public static FactionDefinition SetBuiltIn(this FactionDefinition definition, bool value)
         {
             definition.SetField("builtIn", value);
+            return definition;
         }
 
-        public static void SetMaxRelationCap(this FactionDefinition definition, Int32 value)
+        public static FactionDefinition SetMaxRelationCap(this FactionDefinition definition, int value)
         {
             definition.SetField("maxRelationCap", value);
+            return definition;
         }
 
-        public static void SetMinRelationCap(this FactionDefinition definition, Int32 value)
+        public static FactionDefinition SetMinRelationCap(this FactionDefinition definition, int value)
         {
             definition.SetField("minRelationCap", value);
+            return definition;
         }
 
-        public static void SetProminentMembers(this FactionDefinition definition, List<MonsterDefinition> value)
+        public static FactionDefinition SetProminentMembers(this FactionDefinition definition, List<MonsterDefinition> value)
         {
             definition.SetField("prominentMembers", value);
+            return definition;
         }
 
-        public static void SetSmallSpriteReference(this FactionDefinition definition, AssetReferenceSprite value)
+        public static FactionDefinition SetSmallSpriteReference(this FactionDefinition definition, AssetReferenceSprite value)
         {
             definition.SetField("smallSpriteReference", value);
+            return definition;
         }
     }
 }

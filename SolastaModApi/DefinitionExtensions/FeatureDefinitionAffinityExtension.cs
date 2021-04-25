@@ -1,19 +1,20 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionAffinityExtensions
     {
-        public static void SetMyselfFamilyRestrictions(this FeatureDefinitionAffinity definition, List<String> value)
+        public static FeatureDefinitionAffinity SetMyselfFamilyRestrictions(this FeatureDefinitionAffinity definition, List<string> value)
         {
             definition.SetField("myselfFamilyRestrictions", value);
+            return definition;
         }
 
-        public static void SetOtherCharacterFamilyRestrictions(this FeatureDefinitionAffinity definition, List<String> value)
+        public static FeatureDefinitionAffinity SetOtherCharacterFamilyRestrictions(this FeatureDefinitionAffinity definition, List<string> value)
         {
             definition.SetField("otherCharacterFamilyRestrictions", value);
+            return definition;
         }
     }
 }

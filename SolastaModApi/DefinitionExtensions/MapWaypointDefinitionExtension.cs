@@ -1,33 +1,37 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class MapWaypointDefinitionExtensions
     {
-        public static void SetAllowFastTravel(this MapWaypointDefinition definition, Boolean value)
+        public static MapWaypointDefinition SetAllowFastTravel(this MapWaypointDefinition definition, bool value)
         {
             definition.SetField("allowFastTravel", value);
+            return definition;
         }
 
-        public static void SetCameraAngle(this MapWaypointDefinition definition, Single value)
+        public static MapWaypointDefinition SetCameraAngle(this MapWaypointDefinition definition, float value)
         {
             definition.SetField("cameraAngle", value);
+            return definition;
         }
 
-        public static void SetForceCameraOrientation(this MapWaypointDefinition definition, Boolean value)
+        public static MapWaypointDefinition SetForceCameraOrientation(this MapWaypointDefinition definition, bool value)
         {
             definition.SetField("forceCameraOrientation", value);
+            return definition;
         }
 
-        public static void SetLocationExit(this MapWaypointDefinition definition, Boolean value)
+        public static MapWaypointDefinition SetLocationExit(this MapWaypointDefinition definition, bool value)
         {
             definition.SetField("locationExit", value);
+            return definition;
         }
 
-        public static void SetLongRestAvailable(this MapWaypointDefinition definition, Boolean value)
+        public static MapWaypointDefinition SetLongRestAvailable(this MapWaypointDefinition definition, bool value)
         {
             definition.SetField("longRestAvailable", value);
+            return definition;
         }
     }
 }

@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class CampaignNodeTypeDefinitionExtensions
     {
-        public static void SetGraphicsCampaignNodeReference(this CampaignNodeTypeDefinition definition, AssetReference value)
+        public static CampaignNodeTypeDefinition SetGraphicsCampaignNodeReference(this CampaignNodeTypeDefinition definition, AssetReference value)
         {
             definition.SetField("graphicsCampaignNodeReference", value);
+            return definition;
         }
     }
 }

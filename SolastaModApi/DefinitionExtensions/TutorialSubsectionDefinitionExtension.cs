@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class TutorialSubsectionDefinitionExtensions
     {
-        public static void SetTutorialSteps(this TutorialSubsectionDefinition definition, List<TutorialStepDefinition> value)
+        public static TutorialSubsectionDefinition SetTutorialSteps(this TutorialSubsectionDefinition definition, List<TutorialStepDefinition> value)
         {
             definition.SetField("tutorialSteps", value);
+            return definition;
         }
     }
 }

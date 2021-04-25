@@ -1,59 +1,68 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionHealingModifierExtensions
     {
-        public static void SetAddLevel(this FeatureDefinitionHealingModifier definition, LevelSourceType value)
+        public static FeatureDefinitionHealingModifier SetAddLevel(this FeatureDefinitionHealingModifier definition, LevelSourceType value)
         {
             definition.SetField("addLevel", value);
+            return definition;
         }
 
-        public static void SetAdvantageOnHitDieSpending(this FeatureDefinitionHealingModifier definition, Boolean value)
+        public static FeatureDefinitionHealingModifier SetAdvantageOnHitDieSpending(this FeatureDefinitionHealingModifier definition, bool value)
         {
             definition.SetField("advantageOnHitDieSpending", value);
+            return definition;
         }
 
-        public static void SetCannotGainHitPoints(this FeatureDefinitionHealingModifier definition, Boolean value)
+        public static FeatureDefinitionHealingModifier SetCannotGainHitPoints(this FeatureDefinitionHealingModifier definition, bool value)
         {
             definition.SetField("cannotGainHitPoints", value);
+            return definition;
         }
 
-        public static void SetHealingBonusDiceNumber(this FeatureDefinitionHealingModifier definition, Int32 value)
+        public static FeatureDefinitionHealingModifier SetHealingBonusDiceNumber(this FeatureDefinitionHealingModifier definition, int value)
         {
             definition.SetField("healingBonusDiceNumber", value);
+            return definition;
         }
 
-        public static void SetHealingBonusDiceType(this FeatureDefinitionHealingModifier definition, DieType value)
+        public static FeatureDefinitionHealingModifier SetHealingBonusDiceType(this FeatureDefinitionHealingModifier definition, DieType value)
         {
             definition.SetField("healingBonusDiceType", value);
+            return definition;
         }
 
-        public static void SetHealsSelfWhenCastingHealingSpell(this FeatureDefinitionHealingModifier definition, Boolean value)
+        public static FeatureDefinitionHealingModifier SetHealsSelfWhenCastingHealingSpell(this FeatureDefinitionHealingModifier definition, bool value)
         {
             definition.SetField("healsSelfWhenCastingHealingSpell", value);
+            return definition;
         }
 
-        public static void SetMaximizeReceivedHealing(this FeatureDefinitionHealingModifier definition, Boolean value)
+        public static FeatureDefinitionHealingModifier SetMaximizeReceivedHealing(this FeatureDefinitionHealingModifier definition, bool value)
         {
             definition.SetField("maximizeReceivedHealing", value);
+            return definition;
         }
 
-        public static void SetSelfHealingAddLevel(this FeatureDefinitionHealingModifier definition, LevelSourceType value)
+        public static FeatureDefinitionHealingModifier SetSelfHealingAddLevel(this FeatureDefinitionHealingModifier definition, LevelSourceType value)
         {
             definition.SetField("selfHealingAddLevel", value);
+            return definition;
         }
 
-        public static void SetSelfHealingDiceNumber(this FeatureDefinitionHealingModifier definition, Int32 value)
+        public static FeatureDefinitionHealingModifier SetSelfHealingDiceNumber(this FeatureDefinitionHealingModifier definition, int value)
         {
             definition.SetField("selfHealingDiceNumber", value);
+            return definition;
         }
 
-        public static void SetSelfHealingDiceType(this FeatureDefinitionHealingModifier definition, DieType value)
+        public static FeatureDefinitionHealingModifier SetSelfHealingDiceType(this FeatureDefinitionHealingModifier definition, DieType value)
         {
             definition.SetField("selfHealingDiceType", value);
+            return definition;
         }
     }
 }

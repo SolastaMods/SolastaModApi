@@ -1,19 +1,20 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class EnvironmentDefinitionExtensions
     {
-        public static void SetDimensions(this EnvironmentDefinition definition, Vector2Int value)
+        public static EnvironmentDefinition SetDimensions(this EnvironmentDefinition definition, Vector2Int value)
         {
             definition.SetField("dimensions", value);
+            return definition;
         }
 
-        public static void SetHasFixedDimensions(this EnvironmentDefinition definition, Boolean value)
+        public static EnvironmentDefinition SetHasFixedDimensions(this EnvironmentDefinition definition, bool value)
         {
             definition.SetField("hasFixedDimensions", value);
+            return definition;
         }
     }
 }

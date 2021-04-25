@@ -1,23 +1,25 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionSenseExtensions
     {
-        public static void SetSenseRange(this FeatureDefinitionSense definition, Int32 value)
+        public static FeatureDefinitionSense SetSenseRange(this FeatureDefinitionSense definition, int value)
         {
             definition.SetField("senseRange", value);
+            return definition;
         }
 
-        public static void SetSenseType(this FeatureDefinitionSense definition, SenseMode.Type value)
+        public static FeatureDefinitionSense SetSenseType(this FeatureDefinitionSense definition, SenseMode.Type value)
         {
             definition.SetField("senseType", value);
+            return definition;
         }
 
-        public static void SetStealthBreakerRange(this FeatureDefinitionSense definition, Int32 value)
+        public static FeatureDefinitionSense SetStealthBreakerRange(this FeatureDefinitionSense definition, int value)
         {
             definition.SetField("stealthBreakerRange", value);
+            return definition;
         }
     }
 }

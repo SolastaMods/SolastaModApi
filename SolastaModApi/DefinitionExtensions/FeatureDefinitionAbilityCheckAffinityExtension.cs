@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionAbilityCheckAffinityExtensions
     {
-        public static void SetAffinityGroups(this FeatureDefinitionAbilityCheckAffinity definition, List<FeatureDefinitionAbilityCheckAffinity.AbilityCheckAffinityGroup> value)
+        public static FeatureDefinitionAbilityCheckAffinity SetAffinityGroups(this FeatureDefinitionAbilityCheckAffinity definition, List<FeatureDefinitionAbilityCheckAffinity.AbilityCheckAffinityGroup> value)
         {
             definition.SetField("affinityGroups", value);
+            return definition;
         }
     }
 }

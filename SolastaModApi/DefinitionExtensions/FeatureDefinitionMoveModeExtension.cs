@@ -1,19 +1,20 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionMoveModeExtensions
     {
-        public static void SetMoveMode(this FeatureDefinitionMoveMode definition, MoveMode value)
+        public static FeatureDefinitionMoveMode SetMoveMode(this FeatureDefinitionMoveMode definition, MoveMode value)
         {
             definition.SetField("moveMode", value);
+            return definition;
         }
 
-        public static void SetSpeed(this FeatureDefinitionMoveMode definition, Int32 value)
+        public static FeatureDefinitionMoveMode SetSpeed(this FeatureDefinitionMoveMode definition, int value)
         {
             definition.SetField("speed", value);
+            return definition;
         }
     }
 }

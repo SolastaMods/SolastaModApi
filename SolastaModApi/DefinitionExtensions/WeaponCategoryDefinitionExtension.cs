@@ -4,9 +4,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class WeaponCategoryDefinitionExtensions
     {
-        public static void SetCategoryChoice(this WeaponCategoryDefinition definition, WeaponCategoryDefinition.CategoryChoiceEnum value)
+        public static WeaponCategoryDefinition SetCategoryChoice(this WeaponCategoryDefinition definition, WeaponCategoryDefinition.CategoryChoiceEnum value)
         {
             definition.SetField("categoryChoice", value);
+            return definition;
         }
     }
 }

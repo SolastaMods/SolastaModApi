@@ -1,23 +1,25 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class TutorialStepDefinitionExtensions
     {
-        public static void SetHideCharacterInspection(this TutorialStepDefinition definition, Boolean value)
+        public static TutorialStepDefinition SetHideCharacterInspection(this TutorialStepDefinition definition, bool value)
         {
             definition.SetField("hideCharacterInspection", value);
+            return definition;
         }
 
-        public static void SetHideJournal(this TutorialStepDefinition definition, Boolean value)
+        public static TutorialStepDefinition SetHideJournal(this TutorialStepDefinition definition, bool value)
         {
             definition.SetField("hideJournal", value);
+            return definition;
         }
 
-        public static void SetNextStepDefinition(this TutorialStepDefinition definition, TutorialStepDefinition value)
+        public static TutorialStepDefinition SetNextStepDefinition(this TutorialStepDefinition definition, TutorialStepDefinition value)
         {
             definition.SetField("nextStepDefinition", value);
+            return definition;
         }
     }
 }

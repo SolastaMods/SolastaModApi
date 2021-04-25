@@ -1,53 +1,61 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class SlotTypeDefinitionExtensions
     {
-        public static void SetAlwaysLocked(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetAlwaysLocked(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("alwaysLocked", value);
+            return definition;
         }
 
-        public static void SetBodySlot(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetBodySlot(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("bodySlot", value);
+            return definition;
         }
 
-        public static void SetCanDisplayArmor(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetCanDisplayArmor(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("canDisplayArmor", value);
+            return definition;
         }
 
-        public static void SetCanDisplayArmorForPhoto(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetCanDisplayArmorForPhoto(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("canDisplayArmorForPhoto", value);
+            return definition;
         }
 
-        public static void SetCanDisplayLight(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetCanDisplayLight(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("canDisplayLight", value);
+            return definition;
         }
 
-        public static void SetCanStack(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetCanStack(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("canStack", value);
+            return definition;
         }
 
-        public static void SetDisplayArmorSortingIndex(this SlotTypeDefinition definition, Int32 value)
+        public static SlotTypeDefinition SetDisplayArmorSortingIndex(this SlotTypeDefinition definition, int value)
         {
             definition.SetField("displayArmorSortingIndex", value);
+            return definition;
         }
 
-        public static void SetHasDefaultVisual(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetHasDefaultVisual(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("hasDefaultVisual", value);
+            return definition;
         }
 
-        public static void SetLockedInBattle(this SlotTypeDefinition definition, Boolean value)
+        public static SlotTypeDefinition SetLockedInBattle(this SlotTypeDefinition definition, bool value)
         {
             definition.SetField("lockedInBattle", value);
+            return definition;
         }
     }
 }

@@ -1,13 +1,13 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class MerchantCategoryDefinitionExtensions
     {
-        public static void SetAssignableToItem(this MerchantCategoryDefinition definition, Boolean value)
+        public static MerchantCategoryDefinition SetAssignableToItem(this MerchantCategoryDefinition definition, bool value)
         {
             definition.SetField("assignableToItem", value);
+            return definition;
         }
     }
 }

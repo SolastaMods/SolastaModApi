@@ -1,29 +1,32 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FactionStatusDefinitionExtensions
     {
-        public static void SetCeiling(this FactionStatusDefinition definition, Int32 value)
+        public static FactionStatusDefinition SetCeiling(this FactionStatusDefinition definition, int value)
         {
             definition.SetField("ceiling", value);
+            return definition;
         }
 
-        public static void SetCombatSide(this FactionStatusDefinition definition, Side value)
+        public static FactionStatusDefinition SetCombatSide(this FactionStatusDefinition definition, Side value)
         {
             definition.SetField("combatSide", value);
+            return definition;
         }
 
-        public static void SetExplorationSide(this FactionStatusDefinition definition, Side value)
+        public static FactionStatusDefinition SetExplorationSide(this FactionStatusDefinition definition, Side value)
         {
             definition.SetField("explorationSide", value);
+            return definition;
         }
 
-        public static void SetMerchantRebatePercent(this FactionStatusDefinition definition, Int32 value)
+        public static FactionStatusDefinition SetMerchantRebatePercent(this FactionStatusDefinition definition, int value)
         {
             definition.SetField("merchantRebatePercent", value);
+            return definition;
         }
     }
 }

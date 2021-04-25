@@ -1,18 +1,19 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class TravelPaceDefinitionExtensions
     {
-        public static void SetPerceptionModifier(this TravelPaceDefinition definition, Int32 value)
+        public static TravelPaceDefinition SetPerceptionModifier(this TravelPaceDefinition definition, int value)
         {
             definition.SetField("perceptionModifier", value);
+            return definition;
         }
 
-        public static void SetTravelDistancePerHour(this TravelPaceDefinition definition, Single value)
+        public static TravelPaceDefinition SetTravelDistancePerHour(this TravelPaceDefinition definition, float value)
         {
             definition.SetField("travelDistancePerHour", value);
+            return definition;
         }
     }
 }

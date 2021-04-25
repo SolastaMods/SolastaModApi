@@ -1,39 +1,44 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class TravelJournalDefinitionExtensions
     {
-        public static void SetIndentWidth(this TravelJournalDefinition definition, Single value)
+        public static TravelJournalDefinition SetIndentWidth(this TravelJournalDefinition definition, float value)
         {
             definition.SetField("indentWidth", value);
+            return definition;
         }
 
-        public static void SetLineHeight(this TravelJournalDefinition definition, Single value)
+        public static TravelJournalDefinition SetLineHeight(this TravelJournalDefinition definition, float value)
         {
             definition.SetField("lineHeight", value);
+            return definition;
         }
 
-        public static void SetLineSpacing(this TravelJournalDefinition definition, Single value)
+        public static TravelJournalDefinition SetLineSpacing(this TravelJournalDefinition definition, float value)
         {
             definition.SetField("lineSpacing", value);
+            return definition;
         }
 
-        public static void SetMinHeight(this TravelJournalDefinition definition, Single value)
+        public static TravelJournalDefinition SetMinHeight(this TravelJournalDefinition definition, float value)
         {
             definition.SetField("minHeight", value);
+            return definition;
         }
 
-        public static void SetStyleDuplets(this TravelJournalDefinition definition, List<TravelStyleDuplet> value)
+        public static TravelJournalDefinition SetStyleDuplets(this TravelJournalDefinition definition, List<TravelStyleDuplet> value)
         {
             definition.SetField("styleDuplets", value);
+            return definition;
         }
 
-        public static void SetWordSpacing(this TravelJournalDefinition definition, Single value)
+        public static TravelJournalDefinition SetWordSpacing(this TravelJournalDefinition definition, float value)
         {
             definition.SetField("wordSpacing", value);
+            return definition;
         }
     }
 }

@@ -1,19 +1,20 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class CharacterFamilyDefinitionExtensions
     {
-        public static void SetExtraplanar(this CharacterFamilyDefinition definition, Boolean value)
+        public static CharacterFamilyDefinition SetExtraplanar(this CharacterFamilyDefinition definition, bool value)
         {
             definition.SetField("extraplanar", value);
+            return definition;
         }
 
-        public static void SetFeatures(this CharacterFamilyDefinition definition, List<FeatureDefinition> value)
+        public static CharacterFamilyDefinition SetFeatures(this CharacterFamilyDefinition definition, List<FeatureDefinition> value)
         {
             definition.SetField("features", value);
+            return definition;
         }
     }
 }

@@ -1,23 +1,25 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class SkillDefinitionExtensions
     {
-        public static void SetAbilityScore(this SkillDefinition definition, String value)
+        public static SkillDefinition SetAbilityScore(this SkillDefinition definition, string value)
         {
             definition.SetField("abilityScore", value);
+            return definition;
         }
 
-        public static void SetPersonalityAdditiveBase(this SkillDefinition definition, Int32 value)
+        public static SkillDefinition SetPersonalityAdditiveBase(this SkillDefinition definition, int value)
         {
             definition.SetField("personalityAdditiveBase", value);
+            return definition;
         }
 
-        public static void SetPersonalityFlag(this SkillDefinition definition, Boolean value)
+        public static SkillDefinition SetPersonalityFlag(this SkillDefinition definition, bool value)
         {
             definition.SetField("personalityFlag", value);
+            return definition;
         }
     }
 }

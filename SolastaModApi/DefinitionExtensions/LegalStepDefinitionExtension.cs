@@ -1,18 +1,19 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class LegalStepDefinitionExtensions
     {
-        public static void SetPreferenceKey(this LegalStepDefinition definition, String value)
+        public static LegalStepDefinition SetPreferenceKey(this LegalStepDefinition definition, string value)
         {
             definition.SetField("preferenceKey", value);
+            return definition;
         }
 
-        public static void SetRequiresAgreement(this LegalStepDefinition definition, Boolean value)
+        public static LegalStepDefinition SetRequiresAgreement(this LegalStepDefinition definition, bool value)
         {
             definition.SetField("requiresAgreement", value);
+            return definition;
         }
     }
 }

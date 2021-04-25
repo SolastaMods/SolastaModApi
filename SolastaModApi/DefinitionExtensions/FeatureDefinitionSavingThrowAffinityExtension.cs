@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionSavingThrowAffinityExtensions
     {
-        public static void SetAffinityGroups(this FeatureDefinitionSavingThrowAffinity definition, List<FeatureDefinitionSavingThrowAffinity.SavingThrowAffinityGroup> value)
+        public static FeatureDefinitionSavingThrowAffinity SetAffinityGroups(this FeatureDefinitionSavingThrowAffinity definition, List<FeatureDefinitionSavingThrowAffinity.SavingThrowAffinityGroup> value)
         {
             definition.SetField("affinityGroups", value);
+            return definition;
         }
     }
 }

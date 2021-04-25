@@ -1,29 +1,32 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class EncounterDefinitionExtensions
     {
-        public static void SetChallengeRating(this EncounterDefinition definition, Int32 value)
+        public static EncounterDefinition SetChallengeRating(this EncounterDefinition definition, int value)
         {
             definition.SetField("challengeRating", value);
+            return definition;
         }
 
-        public static void SetLocationOverride(this EncounterDefinition definition, LocationDefinition value)
+        public static EncounterDefinition SetLocationOverride(this EncounterDefinition definition, LocationDefinition value)
         {
             definition.SetField("locationOverride", value);
+            return definition;
         }
 
-        public static void SetMonsterOccurences(this EncounterDefinition definition, List<MonsterOccurenceDescription> value)
+        public static EncounterDefinition SetMonsterOccurences(this EncounterDefinition definition, List<MonsterOccurenceDescription> value)
         {
             definition.SetField("monsterOccurences", value);
+            return definition;
         }
 
-        public static void SetType(this EncounterDefinition definition, EncounterDefinitions.Type value)
+        public static EncounterDefinition SetType(this EncounterDefinition definition, EncounterDefinitions.Type value)
         {
             definition.SetField("type", value);
+            return definition;
         }
     }
 }

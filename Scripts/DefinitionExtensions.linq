@@ -121,11 +121,11 @@ void CreateExtensions(Type t, bool createFiles = false)
 	var methods = privateFieldsThatNeedWriter
 		.OrderBy(ftnw => ftnw.Name)
 		.Select(f =>
-			MethodDeclaration(ParseTypeName("void"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
+			MethodDeclaration(ParseTypeName($"{t.Name}"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
 		   .AddModifiers(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.StaticKeyword))
 		   .AddParameterListParameters(
 		   		GetThisParameterFromType(t), GetParameterFromField(f.FieldInfo))
-		   .WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);")))
+		   .WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);"), ParseStatement("return definition;")))
 		);
 
 	if (methods.Any())

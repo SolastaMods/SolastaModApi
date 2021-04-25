@@ -1,44 +1,50 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class RecipeDefinitionExtensions
     {
-        public static void SetCraftedItem(this RecipeDefinition definition, ItemDefinition value)
+        public static RecipeDefinition SetCraftedItem(this RecipeDefinition definition, ItemDefinition value)
         {
             definition.SetField("craftedItem", value);
+            return definition;
         }
 
-        public static void SetCraftingDC(this RecipeDefinition definition, Int32 value)
+        public static RecipeDefinition SetCraftingDC(this RecipeDefinition definition, int value)
         {
             definition.SetField("craftingDC", value);
+            return definition;
         }
 
-        public static void SetCraftingHours(this RecipeDefinition definition, Int32 value)
+        public static RecipeDefinition SetCraftingHours(this RecipeDefinition definition, int value)
         {
             definition.SetField("craftingHours", value);
+            return definition;
         }
 
-        public static void SetIngredients(this RecipeDefinition definition, List<IngredientOccurenceDescription> value)
+        public static RecipeDefinition SetIngredients(this RecipeDefinition definition, List<IngredientOccurenceDescription> value)
         {
             definition.SetField("ingredients", value);
+            return definition;
         }
 
-        public static void SetSpellDefinition(this RecipeDefinition definition, SpellDefinition value)
+        public static RecipeDefinition SetSpellDefinition(this RecipeDefinition definition, SpellDefinition value)
         {
             definition.SetField("spellDefinition", value);
+            return definition;
         }
 
-        public static void SetStackCount(this RecipeDefinition definition, Int32 value)
+        public static RecipeDefinition SetStackCount(this RecipeDefinition definition, int value)
         {
             definition.SetField("stackCount", value);
+            return definition;
         }
 
-        public static void SetToolTypeDefinition(this RecipeDefinition definition, ToolTypeDefinition value)
+        public static RecipeDefinition SetToolTypeDefinition(this RecipeDefinition definition, ToolTypeDefinition value)
         {
             definition.SetField("toolTypeDefinition", value);
+            return definition;
         }
     }
 }

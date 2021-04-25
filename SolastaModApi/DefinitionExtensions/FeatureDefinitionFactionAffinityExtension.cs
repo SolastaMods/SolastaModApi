@@ -4,9 +4,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionFactionAffinityExtensions
     {
-        public static void SetOperation(this FeatureDefinitionFactionAffinity definition, FactionOperationDescription value)
+        public static FeatureDefinitionFactionAffinity SetOperation(this FeatureDefinitionFactionAffinity definition, FactionOperationDescription value)
         {
             definition.SetField("operation", value);
+            return definition;
         }
     }
 }

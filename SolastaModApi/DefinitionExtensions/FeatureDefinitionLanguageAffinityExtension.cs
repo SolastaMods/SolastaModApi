@@ -1,19 +1,20 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionLanguageAffinityExtensions
     {
-        public static void SetKnownLanguages(this FeatureDefinitionLanguageAffinity definition, List<String> value)
+        public static FeatureDefinitionLanguageAffinity SetKnownLanguages(this FeatureDefinitionLanguageAffinity definition, List<string> value)
         {
             definition.SetField("knownLanguages", value);
+            return definition;
         }
 
-        public static void SetUniversalReader(this FeatureDefinitionLanguageAffinity definition, Boolean value)
+        public static FeatureDefinitionLanguageAffinity SetUniversalReader(this FeatureDefinitionLanguageAffinity definition, bool value)
         {
             definition.SetField("universalReader", value);
+            return definition;
         }
     }
 }

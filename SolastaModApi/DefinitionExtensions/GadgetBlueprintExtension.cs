@@ -5,14 +5,16 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class GadgetBlueprintExtensions
     {
-        public static void SetInteractionNodes(this GadgetBlueprint definition, List<InteractionNodeDescription> value)
+        public static GadgetBlueprint SetInteractionNodes(this GadgetBlueprint definition, List<InteractionNodeDescription> value)
         {
             definition.SetField("interactionNodes", value);
+            return definition;
         }
 
-        public static void SetParameters(this GadgetBlueprint definition, List<GadgetParameterDescription> value)
+        public static GadgetBlueprint SetParameters(this GadgetBlueprint definition, List<GadgetParameterDescription> value)
         {
             definition.SetField("parameters", value);
+            return definition;
         }
     }
 }

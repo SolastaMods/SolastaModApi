@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionLightAffinityExtensions
     {
-        public static void SetLightingEffectAndConditionList(this FeatureDefinitionLightAffinity definition, List<FeatureDefinitionLightAffinity.LightingEffectAndCondition> value)
+        public static FeatureDefinitionLightAffinity SetLightingEffectAndConditionList(this FeatureDefinitionLightAffinity definition, List<FeatureDefinitionLightAffinity.LightingEffectAndCondition> value)
         {
             definition.SetField("lightingEffectAndConditionList", value);
+            return definition;
         }
     }
 }

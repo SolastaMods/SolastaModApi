@@ -1,18 +1,19 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class LanguageDefinitionExtensions
     {
-        public static void SetPersonalityAdditiveBase(this LanguageDefinition definition, Int32 value)
+        public static LanguageDefinition SetPersonalityAdditiveBase(this LanguageDefinition definition, int value)
         {
             definition.SetField("personalityAdditiveBase", value);
+            return definition;
         }
 
-        public static void SetPersonalityFlag(this LanguageDefinition definition, Boolean value)
+        public static LanguageDefinition SetPersonalityFlag(this LanguageDefinition definition, bool value)
         {
             definition.SetField("personalityFlag", value);
+            return definition;
         }
     }
 }

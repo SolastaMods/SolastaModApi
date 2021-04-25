@@ -5,9 +5,10 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class NamedPlaceDefinitionExtensions
     {
-        public static void SetNamedPlaceType(this NamedPlaceDefinition definition, NamedPlaceType value)
+        public static NamedPlaceDefinition SetNamedPlaceType(this NamedPlaceDefinition definition, NamedPlaceType value)
         {
             definition.SetField("namedPlaceType", value);
+            return definition;
         }
     }
 }

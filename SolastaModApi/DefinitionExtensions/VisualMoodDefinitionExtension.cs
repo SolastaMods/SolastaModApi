@@ -5,14 +5,16 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class VisualMoodDefinitionExtensions
     {
-        public static void SetGlobalPostProcessProfile(this VisualMoodDefinition definition, PostProcessProfile value)
+        public static VisualMoodDefinition SetGlobalPostProcessProfile(this VisualMoodDefinition definition, PostProcessProfile value)
         {
             definition.SetField("globalPostProcessProfile", value);
+            return definition;
         }
 
-        public static void SetRenderSettingsSceneProfile(this VisualMoodDefinition definition, RenderSettingsSceneProfile value)
+        public static VisualMoodDefinition SetRenderSettingsSceneProfile(this VisualMoodDefinition definition, RenderSettingsSceneProfile value)
         {
             definition.SetField("renderSettingsSceneProfile", value);
+            return definition;
         }
     }
 }

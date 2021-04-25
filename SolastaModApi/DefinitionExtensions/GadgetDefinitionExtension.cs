@@ -1,13 +1,13 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class GadgetDefinitionExtensions
     {
-        public static void SetArmorClass(this GadgetDefinition definition, Int32 value)
+        public static GadgetDefinition SetArmorClass(this GadgetDefinition definition, int value)
         {
             definition.SetField("armorClass", value);
+            return definition;
         }
     }
 }

@@ -1,38 +1,43 @@
 using SolastaModApi.Infrastructure;
-using System;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class TutorialTocDefinitionExtensions
     {
-        public static void SetSectionLineHeight(this TutorialTocDefinition definition, Single value)
+        public static TutorialTocDefinition SetSectionLineHeight(this TutorialTocDefinition definition, float value)
         {
             definition.SetField("sectionLineHeight", value);
+            return definition;
         }
 
-        public static void SetSubsectionHeaderHeight(this TutorialTocDefinition definition, Single value)
+        public static TutorialTocDefinition SetSubsectionHeaderHeight(this TutorialTocDefinition definition, float value)
         {
             definition.SetField("subsectionHeaderHeight", value);
+            return definition;
         }
 
-        public static void SetSubsectionIndentWidth(this TutorialTocDefinition definition, Single value)
+        public static TutorialTocDefinition SetSubsectionIndentWidth(this TutorialTocDefinition definition, float value)
         {
             definition.SetField("subsectionIndentWidth", value);
+            return definition;
         }
 
-        public static void SetSubsectionLineHeight(this TutorialTocDefinition definition, Single value)
+        public static TutorialTocDefinition SetSubsectionLineHeight(this TutorialTocDefinition definition, float value)
         {
             definition.SetField("subsectionLineHeight", value);
+            return definition;
         }
 
-        public static void SetSubsectionLineSpacing(this TutorialTocDefinition definition, Single value)
+        public static TutorialTocDefinition SetSubsectionLineSpacing(this TutorialTocDefinition definition, float value)
         {
             definition.SetField("subsectionLineSpacing", value);
+            return definition;
         }
 
-        public static void SetSubsectionTrailingHeight(this TutorialTocDefinition definition, Single value)
+        public static TutorialTocDefinition SetSubsectionTrailingHeight(this TutorialTocDefinition definition, float value)
         {
             definition.SetField("subsectionTrailingHeight", value);
+            return definition;
         }
     }
 }

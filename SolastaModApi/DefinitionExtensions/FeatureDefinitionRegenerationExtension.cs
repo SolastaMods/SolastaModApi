@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System;
 using System.Collections.Generic;
 using static RuleDefinitions;
 
@@ -7,34 +6,40 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class FeatureDefinitionRegenerationExtensions
     {
-        public static void SetBonus(this FeatureDefinitionRegeneration definition, Int32 value)
+        public static FeatureDefinitionRegeneration SetBonus(this FeatureDefinitionRegeneration definition, int value)
         {
             definition.SetField("bonus", value);
+            return definition;
         }
 
-        public static void SetDiceNumber(this FeatureDefinitionRegeneration definition, Int32 value)
+        public static FeatureDefinitionRegeneration SetDiceNumber(this FeatureDefinitionRegeneration definition, int value)
         {
             definition.SetField("diceNumber", value);
+            return definition;
         }
 
-        public static void SetDieType(this FeatureDefinitionRegeneration definition, DieType value)
+        public static FeatureDefinitionRegeneration SetDieType(this FeatureDefinitionRegeneration definition, DieType value)
         {
             definition.SetField("dieType", value);
+            return definition;
         }
 
-        public static void SetPreventingDamages(this FeatureDefinitionRegeneration definition, List<String> value)
+        public static FeatureDefinitionRegeneration SetPreventingDamages(this FeatureDefinitionRegeneration definition, List<string> value)
         {
             definition.SetField("preventingDamages", value);
+            return definition;
         }
 
-        public static void SetTickNumber(this FeatureDefinitionRegeneration definition, Int32 value)
+        public static FeatureDefinitionRegeneration SetTickNumber(this FeatureDefinitionRegeneration definition, int value)
         {
             definition.SetField("tickNumber", value);
+            return definition;
         }
 
-        public static void SetTickType(this FeatureDefinitionRegeneration definition, DurationType value)
+        public static FeatureDefinitionRegeneration SetTickType(this FeatureDefinitionRegeneration definition, DurationType value)
         {
             definition.SetField("tickType", value);
+            return definition;
         }
     }
 }

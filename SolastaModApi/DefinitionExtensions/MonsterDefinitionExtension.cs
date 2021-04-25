@@ -1,7 +1,6 @@
 using SolastaModApi.Infrastructure;
 using AK.Wwise;
 using UnityEngine.AddressableAssets;
-using System;
 using TA.AI;
 using System.Collections.Generic;
 using static ActionDefinitions;
@@ -12,239 +11,286 @@ namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class MonsterDefinitionExtensions
     {
-        public static void SetAbilityScores(this MonsterDefinition definition, Int32[] value)
+        public static MonsterDefinition SetAbilityScores(this MonsterDefinition definition, int[] value)
         {
             definition.SetField("abilityScores", value);
+            return definition;
         }
 
-        public static void SetAlignment(this MonsterDefinition definition, String value)
+        public static MonsterDefinition SetAlignment(this MonsterDefinition definition, string value)
         {
             definition.SetField("alignment", value);
+            return definition;
         }
 
-        public static void SetArmor(this MonsterDefinition definition, String value)
+        public static MonsterDefinition SetArmor(this MonsterDefinition definition, string value)
         {
             definition.SetField("armor", value);
+            return definition;
         }
 
-        public static void SetArmorClass(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetArmorClass(this MonsterDefinition definition, int value)
         {
             definition.SetField("armorClass", value);
+            return definition;
         }
 
-        public static void SetAttackIterations(this MonsterDefinition definition, List<MonsterAttackIteration> value)
+        public static MonsterDefinition SetAttackIterations(this MonsterDefinition definition, List<MonsterAttackIteration> value)
         {
             definition.SetField("attackIterations", value);
+            return definition;
         }
 
-        public static void SetAudioRaceRTPCValue(this MonsterDefinition definition, Single value)
+        public static MonsterDefinition SetAudioRaceRTPCValue(this MonsterDefinition definition, float value)
         {
             definition.SetField("audioRaceRTPCValue", value);
+            return definition;
         }
 
-        public static void SetAudioSwitches(this MonsterDefinition definition, List<Switch> value)
+        public static MonsterDefinition SetAudioSwitches(this MonsterDefinition definition, List<Switch> value)
         {
             definition.SetField("audioSwitches", value);
+            return definition;
         }
 
-        public static void SetBestiaryEntry(this MonsterDefinition definition, BestiaryEntry value)
+        public static MonsterDefinition SetBestiaryEntry(this MonsterDefinition definition, BestiaryEntry value)
         {
             definition.SetField("bestiaryEntry", value);
+            return definition;
         }
 
-        public static void SetBestiaryLootOptions(this MonsterDefinition definition, List<ItemDefinition> value)
+        public static MonsterDefinition SetBestiaryLootOptions(this MonsterDefinition definition, List<ItemDefinition> value)
         {
             definition.SetField("bestiaryLootOptions", value);
+            return definition;
         }
 
-        public static void SetBestiaryReference(this MonsterDefinition definition, MonsterDefinition value)
+        public static MonsterDefinition SetBestiaryReference(this MonsterDefinition definition, MonsterDefinition value)
         {
             definition.SetField("bestiaryReference", value);
+            return definition;
         }
 
-        public static void SetBestiarySpriteReference(this MonsterDefinition definition, AssetReferenceSprite value)
+        public static MonsterDefinition SetBestiarySpriteReference(this MonsterDefinition definition, AssetReferenceSprite value)
         {
             definition.SetField("bestiarySpriteReference", value);
+            return definition;
         }
 
-        public static void SetChallengeRating(this MonsterDefinition definition, Single value)
+        public static MonsterDefinition SetChallengeRating(this MonsterDefinition definition, float value)
         {
             definition.SetField("challengeRating", value);
+            return definition;
         }
 
-        public static void SetCharacterFamily(this MonsterDefinition definition, String value)
+        public static MonsterDefinition SetCharacterFamily(this MonsterDefinition definition, string value)
         {
             definition.SetField("characterFamily", value);
+            return definition;
         }
 
-        public static void SetCreatureTags(this MonsterDefinition definition, List<String> value)
+        public static MonsterDefinition SetCreatureTags(this MonsterDefinition definition, List<string> value)
         {
             definition.SetField("creatureTags", value);
+            return definition;
         }
 
-        public static void SetDefaultBattleDecisionPackage(this MonsterDefinition definition, DecisionPackageDefinition value)
+        public static MonsterDefinition SetDefaultBattleDecisionPackage(this MonsterDefinition definition, DecisionPackageDefinition value)
         {
             definition.SetField("defaultBattleDecisionPackage", value);
+            return definition;
         }
 
-        public static void SetDefaultFaction(this MonsterDefinition definition, String value)
+        public static MonsterDefinition SetDefaultFaction(this MonsterDefinition definition, string value)
         {
             definition.SetField("defaultFaction", value);
+            return definition;
         }
 
-        public static void SetDifferentActionEachTurn(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetDifferentActionEachTurn(this MonsterDefinition definition, bool value)
         {
             definition.SetField("differentActionEachTurn", value);
+            return definition;
         }
 
-        public static void SetDroppedLootDefinition(this MonsterDefinition definition, LootPackDefinition value)
+        public static MonsterDefinition SetDroppedLootDefinition(this MonsterDefinition definition, LootPackDefinition value)
         {
             definition.SetField("droppedLootDefinition", value);
+            return definition;
         }
 
-        public static void SetDualSex(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetDualSex(this MonsterDefinition definition, bool value)
         {
             definition.SetField("dualSex", value);
+            return definition;
         }
 
-        public static void SetFeatures(this MonsterDefinition definition, List<FeatureDefinition> value)
+        public static MonsterDefinition SetFeatures(this MonsterDefinition definition, List<FeatureDefinition> value)
         {
             definition.SetField("features", value);
+            return definition;
         }
 
-        public static void SetFollowFloorAngle(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetFollowFloorAngle(this MonsterDefinition definition, bool value)
         {
             definition.SetField("followFloorAngle", value);
+            return definition;
         }
 
-        public static void SetForceCombatStartsAnimation(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetForceCombatStartsAnimation(this MonsterDefinition definition, bool value)
         {
             definition.SetField("forceCombatStartsAnimation", value);
+            return definition;
         }
 
-        public static void SetForcePersistentBody(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetForcePersistentBody(this MonsterDefinition definition, bool value)
         {
             definition.SetField("forcePersistentBody", value);
+            return definition;
         }
 
-        public static void SetFullyControlledWhenAllied(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetFullyControlledWhenAllied(this MonsterDefinition definition, bool value)
         {
             definition.SetField("fullyControlledWhenAllied", value);
+            return definition;
         }
 
-        public static void SetHeight(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetHeight(this MonsterDefinition definition, int value)
         {
             definition.SetField("height", value);
+            return definition;
         }
 
-        public static void SetHitDice(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetHitDice(this MonsterDefinition definition, int value)
         {
             definition.SetField("hitDice", value);
+            return definition;
         }
 
-        public static void SetHitDiceType(this MonsterDefinition definition, DieType value)
+        public static MonsterDefinition SetHitDiceType(this MonsterDefinition definition, DieType value)
         {
             definition.SetField("hitDiceType", value);
+            return definition;
         }
 
-        public static void SetHitPointsBonus(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetHitPointsBonus(this MonsterDefinition definition, int value)
         {
             definition.SetField("hitPointsBonus", value);
+            return definition;
         }
 
-        public static void SetInDungeonEditor(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetInDungeonEditor(this MonsterDefinition definition, bool value)
         {
             definition.SetField("inDungeonEditor", value);
+            return definition;
         }
 
-        public static void SetInterceptStance(this MonsterDefinition definition, MoveStance value)
+        public static MonsterDefinition SetInterceptStance(this MonsterDefinition definition, MoveStance value)
         {
             definition.SetField("interceptStance", value);
+            return definition;
         }
 
-        public static void SetIsHusk(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetIsHusk(this MonsterDefinition definition, bool value)
         {
             definition.SetField("isHusk", value);
+            return definition;
         }
 
-        public static void SetLanguages(this MonsterDefinition definition, List<String> value)
+        public static MonsterDefinition SetLanguages(this MonsterDefinition definition, List<string> value)
         {
             definition.SetField("languages", value);
+            return definition;
         }
 
-        public static void SetLegendaryActionOptions(this MonsterDefinition definition, List<LegendaryActionDescription> value)
+        public static MonsterDefinition SetLegendaryActionOptions(this MonsterDefinition definition, List<LegendaryActionDescription> value)
         {
             definition.SetField("legendaryActionOptions", value);
+            return definition;
         }
 
-        public static void SetLegendaryCreature(this MonsterDefinition definition, Boolean value)
+        public static MonsterDefinition SetLegendaryCreature(this MonsterDefinition definition, bool value)
         {
             definition.SetField("legendaryCreature", value);
+            return definition;
         }
 
-        public static void SetMaximalAge(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetMaximalAge(this MonsterDefinition definition, int value)
         {
             definition.SetField("maximalAge", value);
+            return definition;
         }
 
-        public static void SetMaxLegendaryActionPoints(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetMaxLegendaryActionPoints(this MonsterDefinition definition, int value)
         {
             definition.SetField("maxLegendaryActionPoints", value);
+            return definition;
         }
 
-        public static void SetMaxLegendaryResistances(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetMaxLegendaryResistances(this MonsterDefinition definition, int value)
         {
             definition.SetField("maxLegendaryResistances", value);
+            return definition;
         }
 
-        public static void SetMinimalAge(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetMinimalAge(this MonsterDefinition definition, int value)
         {
             definition.SetField("minimalAge", value);
+            return definition;
         }
 
-        public static void SetMonsterPresentation(this MonsterDefinition definition, MonsterPresentation value)
+        public static MonsterDefinition SetMonsterPresentation(this MonsterDefinition definition, MonsterPresentation value)
         {
             definition.SetField("monsterPresentation", value);
+            return definition;
         }
 
-        public static void SetPatrolStance(this MonsterDefinition definition, MoveStance value)
+        public static MonsterDefinition SetPatrolStance(this MonsterDefinition definition, MoveStance value)
         {
             definition.SetField("patrolStance", value);
+            return definition;
         }
 
-        public static void SetSavingThrowScores(this MonsterDefinition definition, List<MonsterSavingThrowProficiency> value)
+        public static MonsterDefinition SetSavingThrowScores(this MonsterDefinition definition, List<MonsterSavingThrowProficiency> value)
         {
             definition.SetField("savingThrowScores", value);
+            return definition;
         }
 
-        public static void SetSkillScores(this MonsterDefinition definition, List<MonsterSkillProficiency> value)
+        public static MonsterDefinition SetSkillScores(this MonsterDefinition definition, List<MonsterSkillProficiency> value)
         {
             definition.SetField("skillScores", value);
+            return definition;
         }
 
-        public static void SetSneakStance(this MonsterDefinition definition, MoveStance value)
+        public static MonsterDefinition SetSneakStance(this MonsterDefinition definition, MoveStance value)
         {
             definition.SetField("sneakStance", value);
+            return definition;
         }
 
-        public static void SetStandardHitPoints(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetStandardHitPoints(this MonsterDefinition definition, int value)
         {
             definition.SetField("standardHitPoints", value);
+            return definition;
         }
 
-        public static void SetStealableLootDefinition(this MonsterDefinition definition, LootPackDefinition value)
+        public static MonsterDefinition SetStealableLootDefinition(this MonsterDefinition definition, LootPackDefinition value)
         {
             definition.SetField("stealableLootDefinition", value);
+            return definition;
         }
 
-        public static void SetThreatEvaluatorDefinition(this MonsterDefinition definition, ThreatEvaluatorDefinition value)
+        public static MonsterDefinition SetThreatEvaluatorDefinition(this MonsterDefinition definition, ThreatEvaluatorDefinition value)
         {
             definition.SetField("threatEvaluatorDefinition", value);
+            return definition;
         }
 
-        public static void SetWeight(this MonsterDefinition definition, Int32 value)
+        public static MonsterDefinition SetWeight(this MonsterDefinition definition, int value)
         {
             definition.SetField("weight", value);
+            return definition;
         }
     }
 }

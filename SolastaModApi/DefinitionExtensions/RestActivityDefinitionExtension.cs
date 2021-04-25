@@ -1,34 +1,38 @@
 using SolastaModApi.Infrastructure;
-using System;
 using static RuleDefinitions;
 
 namespace SolastaModApi.BuilderHelpers.DefinitionExtensions
 {
     public static class RestActivityDefinitionExtensions
     {
-        public static void SetCondition(this RestActivityDefinition definition, RestActivityDefinition.ActivityCondition value)
+        public static RestActivityDefinition SetCondition(this RestActivityDefinition definition, RestActivityDefinition.ActivityCondition value)
         {
             definition.SetField("condition", value);
+            return definition;
         }
 
-        public static void SetFunctor(this RestActivityDefinition definition, String value)
+        public static RestActivityDefinition SetFunctor(this RestActivityDefinition definition, string value)
         {
             definition.SetField("functor", value);
+            return definition;
         }
 
-        public static void SetRestStage(this RestActivityDefinition definition, RestDefinitions.RestStage value)
+        public static RestActivityDefinition SetRestStage(this RestActivityDefinition definition, RestDefinitions.RestStage value)
         {
             definition.SetField("restStage", value);
+            return definition;
         }
 
-        public static void SetRestType(this RestActivityDefinition definition, RestType value)
+        public static RestActivityDefinition SetRestType(this RestActivityDefinition definition, RestType value)
         {
             definition.SetField("restType", value);
+            return definition;
         }
 
-        public static void SetStringParameter(this RestActivityDefinition definition, String value)
+        public static RestActivityDefinition SetStringParameter(this RestActivityDefinition definition, string value)
         {
             definition.SetField("stringParameter", value);
+            return definition;
         }
     }
 }

@@ -120,20 +120,34 @@ void CreateExtensions(Type t, bool createFiles = false)
 		.Where(f => !writeablePublicPropertiesByName.Contains(f.Name))
 		.Where(f => !writeablePublicPropertiesByType.Contains(f.Type));
 
-// TODO: if type T is sealed don't add generics
-
 	var methods = privateFieldsThatNeedWriter
 		.OrderBy(ftnw => ftnw.Name)
 		.Select(f =>
-			MethodDeclaration(ParseTypeName($"T"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
-		   .AddModifiers(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.StaticKeyword))
-		   .AddTypeParameterListParameters(TypeParameter(Identifier("T")))
-		   .AddParameterListParameters(
-		   		Parameter(Identifier("definition")).WithType(ParseTypeName("T")).AddModifiers(Token(SyntaxKind.ThisKeyword)),
-				Parameter(Identifier("value")).WithType(ParseTypeName(SimplifyType(f.FieldType)))
-			)
-			.AddConstraintClauses(TypeParameterConstraintClause("T"))//.WithConstraints(GetSL()))
-			.WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);"), ParseStatement("return definition;")))
+			{
+				if(t.IsSealed)
+				{
+					// Generic constraint not allowed with sealed type
+					return MethodDeclaration(ParseTypeName($"{t.Name}"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
+					   .AddModifiers(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.StaticKeyword))
+					   .AddParameterListParameters(
+							   Parameter(Identifier("definition")).WithType(ParseTypeName($"{t.Name}")).AddModifiers(Token(SyntaxKind.ThisKeyword)),
+							Parameter(Identifier("value")).WithType(ParseTypeName(SimplifyType(f.FieldType)))
+						)
+						.WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);"), ParseStatement("return definition;")));
+				}
+				else
+				{
+					return MethodDeclaration(ParseTypeName($"T"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
+					   .AddModifiers(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.StaticKeyword))
+					   .AddTypeParameterListParameters(TypeParameter(Identifier("T")))
+					   .AddParameterListParameters(
+							   Parameter(Identifier("definition")).WithType(ParseTypeName("T")).AddModifiers(Token(SyntaxKind.ThisKeyword)),
+							Parameter(Identifier("value")).WithType(ParseTypeName(SimplifyType(f.FieldType)))
+						)
+						.AddConstraintClauses(TypeParameterConstraintClause("T"))//.WithConstraints(GetSL()))
+						.WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);"), ParseStatement("return definition;")));
+				}
+			}
 		);
 
 	if (methods.Any())

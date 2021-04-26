@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using System.Collections.Generic;
 using static CharacterClassDefinition;
-using SolastaModApi.BuilderHelpers;
-using SolastaModApi.BuilderHelpers.DefinitionExtensions;
 using SolastaModApi.Infrastructure;
 
 namespace SolastaModApi

@@ -17,7 +17,9 @@ void Main()
 
 	var types = GetDerivedTypes(assembly, typeof(BaseDefinition));
 
-	types.Select(t => new { Type = t.type.Name, Base = t.baseType.Name }).Dump();
+	//types.Select(t => new { Type = t.type.Name, Base = t.baseType.Name }).Dump();
+
+	CreateExtensions(typeof(BaseDefinition), true);
 
 	foreach (var t in types.OrderBy(t => t.type.Name))
 	{
@@ -118,14 +120,20 @@ void CreateExtensions(Type t, bool createFiles = false)
 		.Where(f => !writeablePublicPropertiesByName.Contains(f.Name))
 		.Where(f => !writeablePublicPropertiesByType.Contains(f.Type));
 
+// TODO: if type T is sealed don't add generics
+
 	var methods = privateFieldsThatNeedWriter
 		.OrderBy(ftnw => ftnw.Name)
 		.Select(f =>
-			MethodDeclaration(ParseTypeName($"{t.Name}"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
+			MethodDeclaration(ParseTypeName($"T"), $"Set{GetPropertyNameForField(f.FieldInfo)}")
 		   .AddModifiers(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.StaticKeyword))
+		   .AddTypeParameterListParameters(TypeParameter(Identifier("T")))
 		   .AddParameterListParameters(
-		   		GetThisParameterFromType(t), GetParameterFromField(f.FieldInfo))
-		   .WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);"), ParseStatement("return definition;")))
+		   		Parameter(Identifier("definition")).WithType(ParseTypeName("T")).AddModifiers(Token(SyntaxKind.ThisKeyword)),
+				Parameter(Identifier("value")).WithType(ParseTypeName(SimplifyType(f.FieldType)))
+			)
+			.AddConstraintClauses(TypeParameterConstraintClause("T"))//.WithConstraints(GetSL()))
+			.WithBody(Block(ParseStatement($"definition.SetField(\"{f.Name}\", value);"), ParseStatement("return definition;")))
 		);
 
 	if (methods.Any())
@@ -134,15 +142,18 @@ void CreateExtensions(Type t, bool createFiles = false)
 
 		// namespace
 		var ns = SyntaxFactory
-			.NamespaceDeclaration(ParseName("SolastaModApi.BuilderHelpers.DefinitionExtensions"))
+			.NamespaceDeclaration(ParseName("SolastaModApi"))
 			.AddMembers(cd);
 
-		var path = $@"C:\Users\passp\Source\Repos\SolastaModApi\SolastaModApi\DefinitionExtensions\{t.Name}Extension.cs";
+		var path = $@"C:\Users\passp\Source\Repos\SolastaModApi\SolastaModApi\DefinitionExtensions\{t.Name}Extensions.cs";
 
 		var code = sf.AddMembers(ns)
 			.NormalizeWhitespace()
 			.ToFullString();
 
+		// hack because I can't make .WithConstraints work
+		code = code.Replace("where T :", $"where T : {t.Name}");
+		
 		code.Dump();
 
 		if (createFiles)
@@ -153,6 +164,13 @@ void CreateExtensions(Type t, bool createFiles = false)
 
 	UsingDirectiveSyntax GetUsingSyntax(string name) { return UsingDirective(ParseName(name)); }
 
+	SeparatedSyntaxList<TypeParameterConstraintSyntax> GetSL()
+	{
+		var list = SeparatedList<TypeParameterConstraintSyntax>();
+		list.Add(TypeConstraint(ParseTypeName($"{t.Name}")));	
+		return list;
+	}
+	
 	string GetPropertyNameForField(FieldInfo f)
 	{
 		var type = SimplifyType(f.FieldType);
@@ -191,15 +209,5 @@ void CreateExtensions(Type t, bool createFiles = false)
 		}
 
 		return t.Name;
-	}
-
-	ParameterSyntax GetThisParameterFromType(Type t)
-	{
-		return Parameter(Identifier("definition")).WithType(ParseTypeName(t.Name)).AddModifiers(Token(SyntaxKind.ThisKeyword));
-	}
-
-	ParameterSyntax GetParameterFromField(FieldInfo f)
-	{
-		return Parameter(Identifier("value")).WithType(ParseTypeName(SimplifyType(f.FieldType)));
 	}
 }

@@ -3,7 +3,7 @@ using SolastaModApi.Infrastructure;
 using SolastaTesting.SolastaModApi;
 using UnityEngine;
 
-namespace SolastaModApi.BuilderHelpers
+namespace SolastaModApi
 {
     /// <summary>
     ///     Base class builder for all classes derived from BaseDefinition
@@ -74,11 +74,6 @@ namespace SolastaModApi.BuilderHelpers
             }
 
             return Definition;
-        }
-
-        public void SetGuiPresentation(GuiPresentation guiPresentation)
-        {
-            Definition.SetField("guiPresentation", guiPresentation);
         }
 
         protected T Definition { get; }

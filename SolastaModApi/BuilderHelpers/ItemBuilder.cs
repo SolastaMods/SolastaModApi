@@ -11,7 +11,7 @@ using static ItemDefinition;
 
 namespace SolastaModApi
 {
-    class ItemBuilder
+    public class ItemBuilder
     {
         ItemDefinition MyItem;
 

@@ -11,11 +11,11 @@ using static ItemDefinition;
 
 namespace SolastaModApi
 {
-    public class ItemBuilder
+    public class ItemDefinitionBuilder
     {
         ItemDefinition MyItem;
 
-        public ItemBuilder()
+        public ItemDefinitionBuilder()
         {
             MyItem = ScriptableObject.CreateInstance<ItemDefinition>();
         }

@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -37,13 +36,6 @@ namespace SolastaModApi
             where T : DocumentTableDefinition
         {
             definition.SetField("paragraphSpacing", value);
-            return definition;
-        }
-
-        public static T SetStyleDuplets<T>(this T definition, List<DocumentStyleDuplet> value)
-            where T : DocumentTableDefinition
-        {
-            definition.SetField("styleDuplets", value);
             return definition;
         }
 

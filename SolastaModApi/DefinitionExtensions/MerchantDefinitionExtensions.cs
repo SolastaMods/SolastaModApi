@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -58,13 +57,6 @@ namespace SolastaModApi
             where T : MerchantDefinition
         {
             definition.SetField("overchargePercent", value);
-            return definition;
-        }
-
-        public static T SetStockUnitDescriptions<T>(this T definition, List<StockUnitDescription> value)
-            where T : MerchantDefinition
-        {
-            definition.SetField("stockUnitDescriptions", value);
             return definition;
         }
     }

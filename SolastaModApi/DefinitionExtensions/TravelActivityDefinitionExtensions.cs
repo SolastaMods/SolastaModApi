@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -9,13 +8,6 @@ namespace SolastaModApi
             where T : TravelActivityDefinition
         {
             definition.SetField("fatigueImpactPerHour", value);
-            return definition;
-        }
-
-        public static T SetFixedEvents<T>(this T definition, List<TravelEventFixedOccurenceDescription> value)
-            where T : TravelActivityDefinition
-        {
-            definition.SetField("fixedEvents", value);
             return definition;
         }
 
@@ -30,13 +22,6 @@ namespace SolastaModApi
             where T : TravelActivityDefinition
         {
             definition.SetField("navigationActivity", value);
-            return definition;
-        }
-
-        public static T SetRandomEvents<T>(this T definition, List<TravelEventProbabilityDescription> value)
-            where T : TravelActivityDefinition
-        {
-            definition.SetField("randomEvents", value);
             return definition;
         }
 

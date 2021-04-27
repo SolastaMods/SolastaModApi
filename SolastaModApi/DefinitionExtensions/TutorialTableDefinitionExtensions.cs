@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -9,13 +8,6 @@ namespace SolastaModApi
             where T : TutorialTableDefinition
         {
             definition.SetField("sectionLineHeight", value);
-            return definition;
-        }
-
-        public static T SetSections<T>(this T definition, List<TutorialSectionDefinition> value)
-            where T : TutorialTableDefinition
-        {
-            definition.SetField("sections", value);
             return definition;
         }
 
@@ -58,13 +50,6 @@ namespace SolastaModApi
             where T : TutorialTableDefinition
         {
             definition.SetField("stepWordSpacing", value);
-            return definition;
-        }
-
-        public static T SetStyleDuplets<T>(this T definition, List<TutorialStyleDuplet> value)
-            where T : TutorialTableDefinition
-        {
-            definition.SetField("styleDuplets", value);
             return definition;
         }
 

@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,13 +15,6 @@ namespace SolastaModApi
             where T : BestiaryStatsDefinition
         {
             definition.SetField("lineSpacing", value);
-            return definition;
-        }
-
-        public static T SetStyleDuplets<T>(this T definition, List<BestiaryStatStyleDuplet> value)
-            where T : BestiaryStatsDefinition
-        {
-            definition.SetField("styleDuplets", value);
             return definition;
         }
 

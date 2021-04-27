@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -111,20 +110,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetEquipment<T>(this T definition, List<ItemDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("equipment", value);
-            return definition;
-        }
-
-        public static T SetExpertisesOverride<T>(this T definition, List<string> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("expertisesOverride", value);
-            return definition;
-        }
-
         public static T SetEyeColorMorphotype<T>(this T definition, string value)
             where T : CharacterTemplateDefinition
         {
@@ -143,13 +128,6 @@ namespace SolastaModApi
             where T : CharacterTemplateDefinition
         {
             definition.SetField("faceShapeMorphotype", value);
-            return definition;
-        }
-
-        public static T SetFeatsOverride<T>(this T definition, List<string> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("featsOverride", value);
             return definition;
         }
 
@@ -181,55 +159,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetKnownClassCantrips<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("knownClassCantrips", value);
-            return definition;
-        }
-
-        public static T SetKnownClassSpells<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("knownClassSpells", value);
-            return definition;
-        }
-
-        public static T SetKnownRaceCantrips<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("knownRaceCantrips", value);
-            return definition;
-        }
-
-        public static T SetKnownRaceSpells<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("knownRaceSpells", value);
-            return definition;
-        }
-
-        public static T SetKnownSubclassCantrips<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("knownSubclassCantrips", value);
-            return definition;
-        }
-
-        public static T SetKnownSubclassSpells<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("knownSubclassSpells", value);
-            return definition;
-        }
-
-        public static T SetLanguagesOverride<T>(this T definition, List<string> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("languagesOverride", value);
-            return definition;
-        }
-
         public static T SetMainClass<T>(this T definition, CharacterClassDefinition value)
             where T : CharacterTemplateDefinition
         {
@@ -258,31 +187,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetPreparedClassSpells<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("preparedClassSpells", value);
-            return definition;
-        }
-
-        public static T SetPreparedSubclassSpells<T>(this T definition, List<SpellDefinition> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("preparedSubclassSpells", value);
-            return definition;
-        }
-
         public static T SetSex<T>(this T definition, CreatureSex value)
             where T : CharacterTemplateDefinition
         {
             definition.SetField("sex", value);
-            return definition;
-        }
-
-        public static T SetSkillsOverride<T>(this T definition, List<string> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("skillsOverride", value);
             return definition;
         }
 
@@ -321,24 +229,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetToolsOverride<T>(this T definition, List<string> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("toolsOverride", value);
-            return definition;
-        }
-
         public static T SetVoiceId<T>(this T definition, string value)
             where T : CharacterTemplateDefinition
         {
             definition.SetField("voiceId", value);
-            return definition;
-        }
-
-        public static T SetWieldedItemsConfigurations<T>(this T definition, List<WieldedItemsConfiguration> value)
-            where T : CharacterTemplateDefinition
-        {
-            definition.SetField("wieldedItemsConfigurations", value);
             return definition;
         }
     }

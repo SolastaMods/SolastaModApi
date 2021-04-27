@@ -1,8 +1,6 @@
 using SolastaModApi.Infrastructure;
 using AK.Wwise;
 using UnityEngine.AddressableAssets;
-using System.Collections.Generic;
-using static CampaignDefinition;
 
 namespace SolastaModApi
 {
@@ -61,20 +59,6 @@ namespace SolastaModApi
             where T : LocationDefinition
         {
             definition.SetField("locationPresentation", value);
-            return definition;
-        }
-
-        public static T SetRegisteredFactions<T>(this T definition, List<FactionRegistration> value)
-            where T : LocationDefinition
-        {
-            definition.SetField("registeredFactions", value);
-            return definition;
-        }
-
-        public static T SetRegisteredVariables<T>(this T definition, List<VariableRegistrationDescription> value)
-            where T : LocationDefinition
-        {
-            definition.SetField("registeredVariables", value);
             return definition;
         }
 

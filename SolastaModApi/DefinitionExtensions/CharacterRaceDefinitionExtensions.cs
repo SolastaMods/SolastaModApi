@@ -1,6 +1,4 @@
 using SolastaModApi.Infrastructure;
-using AK.Wwise;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -10,13 +8,6 @@ namespace SolastaModApi
             where T : CharacterRaceDefinition
         {
             definition.SetField("audioRaceRTPCValue", value);
-            return definition;
-        }
-
-        public static T SetAudioSwitches<T>(this T definition, List<Switch> value)
-            where T : CharacterRaceDefinition
-        {
-            definition.SetField("audioSwitches", value);
             return definition;
         }
 
@@ -48,24 +39,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetFeatureUnlocks<T>(this T definition, List<FeatureUnlockByLevel> value)
-            where T : CharacterRaceDefinition
-        {
-            definition.SetField("featureUnlocks", value);
-            return definition;
-        }
-
         public static T SetInventoryDefinition<T>(this T definition, InventoryDefinition value)
             where T : CharacterRaceDefinition
         {
             definition.SetField("inventoryDefinition", value);
-            return definition;
-        }
-
-        public static T SetLanguageAutolearnPreference<T>(this T definition, List<string> value)
-            where T : CharacterRaceDefinition
-        {
-            definition.SetField("languageAutolearnPreference", value);
             return definition;
         }
 
@@ -83,24 +60,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetPersonalityFlagOccurences<T>(this T definition, List<PersonalityFlagOccurence> value)
-            where T : CharacterRaceDefinition
-        {
-            definition.SetField("personalityFlagOccurences", value);
-            return definition;
-        }
-
         public static T SetRacePresentation<T>(this T definition, RacePresentation value)
             where T : CharacterRaceDefinition
         {
             definition.SetField("racePresentation", value);
-            return definition;
-        }
-
-        public static T SetSubRaces<T>(this T definition, List<CharacterRaceDefinition> value)
-            where T : CharacterRaceDefinition
-        {
-            definition.SetField("subRaces", value);
             return definition;
         }
     }

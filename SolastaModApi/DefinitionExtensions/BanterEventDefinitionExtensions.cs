@@ -1,6 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
-using static BanterDefinitions;
 
 namespace SolastaModApi
 {
@@ -24,13 +22,6 @@ namespace SolastaModApi
             where T : BanterEventDefinition
         {
             definition.SetField("eventTrigger", value);
-            return definition;
-        }
-
-        public static T SetEventVariants<T>(this T definition, List<EventVariant> value)
-            where T : BanterEventDefinition
-        {
-            definition.SetField("eventVariants", value);
             return definition;
         }
 

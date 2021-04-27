@@ -1,18 +1,10 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
 {
     public static class ItemDefinitionExtensions
     {
-        public static T SetActiveTags<T>(this T definition, List<string> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("activeTags", value);
-            return definition;
-        }
-
         public static T SetAmmunitionDescription<T>(this T definition, AmmunitionDescription value)
             where T : ItemDefinition
         {
@@ -83,13 +75,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetInactiveTags<T>(this T definition, List<string> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("inactiveTags", value);
-            return definition;
-        }
-
         public static T SetItemPresentation<T>(this T definition, ItemPresentation value)
             where T : ItemDefinition
         {
@@ -104,13 +89,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetItemTags<T>(this T definition, List<string> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("itemTags", value);
-            return definition;
-        }
-
         public static T SetLightSourceItemDescription<T>(this T definition, LightSourceItemDescription value)
             where T : ItemDefinition
         {
@@ -122,34 +100,6 @@ namespace SolastaModApi
             where T : ItemDefinition
         {
             definition.SetField("merchantCategory", value);
-            return definition;
-        }
-
-        public static T SetPersonalityFlagOccurences<T>(this T definition, List<PersonalityFlagOccurence> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("personalityFlagOccurences", value);
-            return definition;
-        }
-
-        public static T SetRequiredAttunementClasses<T>(this T definition, List<CharacterClassDefinition> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("requiredAttunementClasses", value);
-            return definition;
-        }
-
-        public static T SetSlotsWhereActive<T>(this T definition, List<string> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("slotsWhereActive", value);
-            return definition;
-        }
-
-        public static T SetSlotTypes<T>(this T definition, List<string> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("slotTypes", value);
             return definition;
         }
 
@@ -185,13 +135,6 @@ namespace SolastaModApi
             where T : ItemDefinition
         {
             definition.SetField("starterPackDefinition", value);
-            return definition;
-        }
-
-        public static T SetStaticProperties<T>(this T definition, List<ItemPropertyDescription> value)
-            where T : ItemDefinition
-        {
-            definition.SetField("staticProperties", value);
             return definition;
         }
 

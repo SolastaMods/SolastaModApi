@@ -1,7 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine;
-using System.Collections.Generic;
-using static TooltipDefinitions;
 
 namespace SolastaModApi
 {
@@ -18,13 +16,6 @@ namespace SolastaModApi
             where T : GuiTooltipClassDefinition
         {
             definition.SetField("showDelay", value);
-            return definition;
-        }
-
-        public static T SetTooltipFeatures<T>(this T definition, List<FeatureInfo> value)
-            where T : GuiTooltipClassDefinition
-        {
-            definition.SetField("tooltipFeatures", value);
             return definition;
         }
 

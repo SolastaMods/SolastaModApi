@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,13 +15,6 @@ namespace SolastaModApi
             where T : SpellListDefinition
         {
             definition.SetField("maxSpellLevel", value);
-            return definition;
-        }
-
-        public static T SetSpellsByLevel<T>(this T definition, List<SpellListDefinition.SpellsByLevelDuplet> value)
-            where T : SpellListDefinition
-        {
-            definition.SetField("spellsByLevel", value);
             return definition;
         }
     }

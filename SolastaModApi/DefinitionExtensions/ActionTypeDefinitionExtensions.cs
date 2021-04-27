@@ -12,7 +12,7 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetUnavailableColor<T>(this T definition, Color value)
+        public static T SetColor<T>(this T definition, Color value)
             where T : ActionTypeDefinition
         {
             definition.SetField("unavailableColor", value);

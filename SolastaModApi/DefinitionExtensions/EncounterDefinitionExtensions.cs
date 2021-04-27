@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,13 +15,6 @@ namespace SolastaModApi
             where T : EncounterDefinition
         {
             definition.SetField("locationOverride", value);
-            return definition;
-        }
-
-        public static T SetMonsterOccurences<T>(this T definition, List<MonsterOccurenceDescription> value)
-            where T : EncounterDefinition
-        {
-            definition.SetField("monsterOccurences", value);
             return definition;
         }
 

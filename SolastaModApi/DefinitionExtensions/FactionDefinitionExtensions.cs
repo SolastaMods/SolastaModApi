@@ -1,6 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -24,13 +23,6 @@ namespace SolastaModApi
             where T : FactionDefinition
         {
             definition.SetField("minRelationCap", value);
-            return definition;
-        }
-
-        public static T SetProminentMembers<T>(this T definition, List<MonsterDefinition> value)
-            where T : FactionDefinition
-        {
-            definition.SetField("prominentMembers", value);
             return definition;
         }
 

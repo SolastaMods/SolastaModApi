@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,13 +15,6 @@ namespace SolastaModApi
             where T : ToolTypeDefinition
         {
             definition.SetField("hasParentCategory", value);
-            return definition;
-        }
-
-        public static T SetRequiredProficiencyOptions<T>(this T definition, List<string> value)
-            where T : ToolTypeDefinition
-        {
-            definition.SetField("requiredProficiencyOptions", value);
             return definition;
         }
 

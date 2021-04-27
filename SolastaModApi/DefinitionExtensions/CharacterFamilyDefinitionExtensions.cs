@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -9,13 +8,6 @@ namespace SolastaModApi
             where T : CharacterFamilyDefinition
         {
             definition.SetField("extraplanar", value);
-            return definition;
-        }
-
-        public static T SetFeatures<T>(this T definition, List<FeatureDefinition> value)
-            where T : CharacterFamilyDefinition
-        {
-            definition.SetField("features", value);
             return definition;
         }
     }

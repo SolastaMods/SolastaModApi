@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static ActionDefinitions;
 using static RuleDefinitions;
 
@@ -116,13 +115,6 @@ namespace SolastaModApi
             where T : SpellDefinition
         {
             definition.SetField("spellsBundle", value);
-            return definition;
-        }
-
-        public static T SetSubspellsList<T>(this T definition, List<SpellDefinition> value)
-            where T : SpellDefinition
-        {
-            definition.SetField("subspellsList", value);
             return definition;
         }
 

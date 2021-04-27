@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -30,13 +29,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionPerceptionAffinity
         {
             definition.SetField("impairedSight", value);
-            return definition;
-        }
-
-        public static T SetRequiredSensesToPerceive<T>(this T definition, List<SenseMode.Type> value)
-            where T : FeatureDefinitionPerceptionAffinity
-        {
-            definition.SetField("requiredSensesToPerceive", value);
             return definition;
         }
     }

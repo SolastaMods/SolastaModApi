@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,34 +15,6 @@ namespace SolastaModApi
             where T : FeatDefinition
         {
             definition.SetField("armorProficiencyPrerequisite", value);
-            return definition;
-        }
-
-        public static T SetCompatibleClassesPrerequisite<T>(this T definition, List<string> value)
-            where T : FeatDefinition
-        {
-            definition.SetField("compatibleClassesPrerequisite", value);
-            return definition;
-        }
-
-        public static T SetCompatibleRacesPrerequisite<T>(this T definition, List<string> value)
-            where T : FeatDefinition
-        {
-            definition.SetField("compatibleRacesPrerequisite", value);
-            return definition;
-        }
-
-        public static T SetFeatures<T>(this T definition, List<FeatureDefinition> value)
-            where T : FeatDefinition
-        {
-            definition.SetField("features", value);
-            return definition;
-        }
-
-        public static T SetKnownFeatsPrerequisite<T>(this T definition, List<string> value)
-            where T : FeatDefinition
-        {
-            definition.SetField("knownFeatsPrerequisite", value);
             return definition;
         }
 

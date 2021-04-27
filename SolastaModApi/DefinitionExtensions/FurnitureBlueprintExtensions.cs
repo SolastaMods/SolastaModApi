@@ -1,6 +1,4 @@
 using SolastaModApi.Infrastructure;
-using UnityEngine;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -10,13 +8,6 @@ namespace SolastaModApi
             where T : FurnitureBlueprint
         {
             definition.SetField("groundPlacement", value);
-            return definition;
-        }
-
-        public static T SetLightSources<T>(this T definition, List<Vector2> value)
-            where T : FurnitureBlueprint
-        {
-            definition.SetField("lightSources", value);
             return definition;
         }
 

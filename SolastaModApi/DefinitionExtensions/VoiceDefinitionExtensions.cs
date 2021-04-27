@@ -1,6 +1,5 @@
 using SolastaModApi.Infrastructure;
 using AK.Wwise;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -53,13 +52,6 @@ namespace SolastaModApi
             where T : VoiceDefinition
         {
             definition.SetField("wavePrefix", value);
-            return definition;
-        }
-
-        public static T SetWavFilesPath<T>(this T definition, Dictionary<string, string> value)
-            where T : VoiceDefinition
-        {
-            definition.SetField("wavFilesPath", value);
             return definition;
         }
 

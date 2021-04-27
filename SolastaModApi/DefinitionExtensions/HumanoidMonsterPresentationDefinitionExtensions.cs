@@ -1,8 +1,6 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine;
-using System.Collections.Generic;
 using static RuleDefinitions;
-using static MorphotypeElementDefinition;
 
 namespace SolastaModApi
 {
@@ -103,20 +101,6 @@ namespace SolastaModApi
             where T : HumanoidMonsterPresentationDefinition
         {
             definition.SetField("itemDefinitionOffHand", value);
-            return definition;
-        }
-
-        public static T SetMorphotypeElements<T>(this T definition, Dictionary<ElementCategory, string> value)
-            where T : HumanoidMonsterPresentationDefinition
-        {
-            definition.SetField("morphotypeElements", value);
-            return definition;
-        }
-
-        public static T SetMorphotypeElementsAdditionalValues<T>(this T definition, Dictionary<ElementCategory, float> value)
-            where T : HumanoidMonsterPresentationDefinition
-        {
-            definition.SetField("morphotypeElementsAdditionalValues", value);
             return definition;
         }
 

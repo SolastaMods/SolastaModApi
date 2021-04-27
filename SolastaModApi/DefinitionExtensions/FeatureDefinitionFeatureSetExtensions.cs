@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,13 +15,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionFeatureSet
         {
             definition.SetField("enumerateInDescription", value);
-            return definition;
-        }
-
-        public static T SetFeatureSet<T>(this T definition, List<FeatureDefinition> value)
-            where T : FeatureDefinitionFeatureSet
-        {
-            definition.SetField("featureSet", value);
             return definition;
         }
 

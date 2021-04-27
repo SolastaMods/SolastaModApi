@@ -116,7 +116,7 @@ void CreateExtensions(Type t, bool createFiles = false)
 		.Where(f => !readablePublicPropertiesByType.Contains(f.Type));
 
 	var privateFieldsThatNeedWriter = privateFields
-		//.Where(f => !f.FieldType.IsGenericType)
+		.Where(f => !f.FieldType.IsGenericType)
 		.Where(f => !writeablePublicPropertiesByName.Contains(f.Name))
 		.Where(f => !writeablePublicPropertiesByType.Contains(f.Type));
 

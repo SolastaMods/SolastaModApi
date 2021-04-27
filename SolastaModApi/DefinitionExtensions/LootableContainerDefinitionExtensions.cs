@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -30,13 +29,6 @@ namespace SolastaModApi
             where T : LootableContainerDefinition
         {
             definition.SetField("minSlotsNumber", value);
-            return definition;
-        }
-
-        public static T SetRestrictedItems<T>(this T definition, List<ItemDefinition> value)
-            where T : LootableContainerDefinition
-        {
-            definition.SetField("restrictedItems", value);
             return definition;
         }
     }

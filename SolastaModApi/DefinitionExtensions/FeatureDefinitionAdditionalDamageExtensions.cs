@@ -1,6 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -32,13 +31,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionAdditionalDamage
         {
             definition.SetField("computeDescription", value);
-            return definition;
-        }
-
-        public static T SetConditionOperations<T>(this T definition, List<ConditionOperationDescription> value)
-            where T : FeatureDefinitionAdditionalDamage
-        {
-            definition.SetField("conditionOperations", value);
             return definition;
         }
 
@@ -77,24 +69,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetDiceByRankTable<T>(this T definition, List<DiceByRank> value)
-            where T : FeatureDefinitionAdditionalDamage
-        {
-            definition.SetField("diceByRankTable", value);
-            return definition;
-        }
-
         public static T SetFamiliesDiceNumber<T>(this T definition, int value)
             where T : FeatureDefinitionAdditionalDamage
         {
             definition.SetField("familiesDiceNumber", value);
-            return definition;
-        }
-
-        public static T SetFamiliesWithAdditionalDice<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionAdditionalDamage
-        {
-            definition.SetField("familiesWithAdditionalDice", value);
             return definition;
         }
 

@@ -1,19 +1,11 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
 {
     public static class EffectProxyDefinitionExtensions
     {
-        public static T SetAdditionalFeatures<T>(this T definition, List<FeatureDefinition> value)
-            where T : EffectProxyDefinition
-        {
-            definition.SetField("additionalFeatures", value);
-            return definition;
-        }
-
         public static T SetAddLightSource<T>(this T definition, bool value)
             where T : EffectProxyDefinition
         {

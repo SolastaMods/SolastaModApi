@@ -89,5 +89,8 @@
 
 	<ItemGroup>
 	  <Folder Include="DefinitionExtensions\" />
+	  <Folder Include="GuiWrapperExtensions\" />
+	  <Folder Include="DescriptionExtensions\" />
+	  <Folder Include="RulesetEntityExtensions\" />
 	</ItemGroup>
 </Project>

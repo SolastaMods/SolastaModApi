@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -24,13 +23,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionRegeneration
         {
             definition.SetField("dieType", value);
-            return definition;
-        }
-
-        public static T SetPreventingDamages<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionRegeneration
-        {
-            definition.SetField("preventingDamages", value);
             return definition;
         }
 

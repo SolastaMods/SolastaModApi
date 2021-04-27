@@ -1,7 +1,5 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine;
-using System.Collections.Generic;
-using static BaseBlueprint;
 
 namespace SolastaModApi
 {
@@ -18,13 +16,6 @@ namespace SolastaModApi
             where T : BaseBlueprint
         {
             definition.SetField("dimensions", value);
-            return definition;
-        }
-
-        public static T SetPrefabsByEnvironment<T>(this T definition, List<PrefabByEnvironmentDescription> value)
-            where T : BaseBlueprint
-        {
-            definition.SetField("prefabsByEnvironment", value);
             return definition;
         }
     }

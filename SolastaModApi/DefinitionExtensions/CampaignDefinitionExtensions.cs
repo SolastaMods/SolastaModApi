@@ -1,19 +1,10 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
-using System.Collections.Generic;
-using static CampaignDefinition;
 
 namespace SolastaModApi
 {
     public static class CampaignDefinitionExtensions
     {
-        public static T SetAutoGameplayRoles<T>(this T definition, List<GameplayRoleFilter> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("autoGameplayRoles", value);
-            return definition;
-        }
-
         public static T SetCalendar<T>(this T definition, CalendarDefinition value)
             where T : CampaignDefinition
         {
@@ -35,13 +26,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetInitialBestiaryContent<T>(this T definition, List<MonsterKnowledgeDescription> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("initialBestiaryContent", value);
-            return definition;
-        }
-
         public static T SetInitialPartyPosition<T>(this T definition, string value)
             where T : CampaignDefinition
         {
@@ -53,13 +37,6 @@ namespace SolastaModApi
             where T : CampaignDefinition
         {
             definition.SetField("insideLocation", value);
-            return definition;
-        }
-
-        public static T SetIntroductionCaptions<T>(this T definition, List<string> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("introductionCaptions", value);
             return definition;
         }
 
@@ -84,13 +61,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetKnownRecipes<T>(this T definition, List<RecipeDefinition> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("knownRecipes", value);
-            return definition;
-        }
-
         public static T SetMaxLevel<T>(this T definition, int value)
             where T : CampaignDefinition
         {
@@ -109,27 +79,6 @@ namespace SolastaModApi
             where T : CampaignDefinition
         {
             definition.SetField("partySize", value);
-            return definition;
-        }
-
-        public static T SetPredefinedParty<T>(this T definition, List<string> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("predefinedParty", value);
-            return definition;
-        }
-
-        public static T SetRegisteredFactions<T>(this T definition, List<FactionRegistration> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("registeredFactions", value);
-            return definition;
-        }
-
-        public static T SetRegisteredVariables<T>(this T definition, List<VariableRegistrationDescription> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("registeredVariables", value);
             return definition;
         }
 
@@ -165,13 +114,6 @@ namespace SolastaModApi
             where T : CampaignDefinition
         {
             definition.SetField("startHour", value);
-            return definition;
-        }
-
-        public static T SetStartingQuests<T>(this T definition, List<QuestTreeDefinition> value)
-            where T : CampaignDefinition
-        {
-            definition.SetField("startingQuests", value);
             return definition;
         }
 

@@ -1,46 +1,10 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
 {
     public static class FeatureDefinitionCastSpellExtensions
     {
-        public static T SetKnownCantrips<T>(this T definition, List<int> value)
-            where T : FeatureDefinitionCastSpell
-        {
-            definition.SetField("knownCantrips", value);
-            return definition;
-        }
-
-        public static T SetKnownSpells<T>(this T definition, List<int> value)
-            where T : FeatureDefinitionCastSpell
-        {
-            definition.SetField("knownSpells", value);
-            return definition;
-        }
-
-        public static T SetRestrictedSchools<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionCastSpell
-        {
-            definition.SetField("restrictedSchools", value);
-            return definition;
-        }
-
-        public static T SetScribedSpells<T>(this T definition, List<int> value)
-            where T : FeatureDefinitionCastSpell
-        {
-            definition.SetField("scribedSpells", value);
-            return definition;
-        }
-
-        public static T SetSlotsPerLevels<T>(this T definition, List<FeatureDefinitionCastSpell.SlotsByLevelDuplet> value)
-            where T : FeatureDefinitionCastSpell
-        {
-            definition.SetField("slotsPerLevels", value);
-            return definition;
-        }
-
         public static T SetSlotsRecharge<T>(this T definition, RechargeRate value)
             where T : FeatureDefinitionCastSpell
         {

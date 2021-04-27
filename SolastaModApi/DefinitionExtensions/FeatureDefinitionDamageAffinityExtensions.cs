@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -87,13 +86,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionDamageAffinity
         {
             definition.SetField("savingThrowModifier", value);
-            return definition;
-        }
-
-        public static T SetTagsIgnoringAffinity<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionDamageAffinity
-        {
-            definition.SetField("tagsIgnoringAffinity", value);
             return definition;
         }
     }

@@ -1,8 +1,6 @@
 using SolastaModApi.Infrastructure;
-using AK.Wwise;
 using UnityEngine.AddressableAssets;
 using TA.AI;
-using System.Collections.Generic;
 using static ActionDefinitions;
 using static RuleDefinitions;
 using static BestiaryDefinitions;
@@ -39,13 +37,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetAttackIterations<T>(this T definition, List<MonsterAttackIteration> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("attackIterations", value);
-            return definition;
-        }
-
         public static T SetAudioRaceRTPCValue<T>(this T definition, float value)
             where T : MonsterDefinition
         {
@@ -53,24 +44,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetAudioSwitches<T>(this T definition, List<Switch> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("audioSwitches", value);
-            return definition;
-        }
-
         public static T SetBestiaryEntry<T>(this T definition, BestiaryEntry value)
             where T : MonsterDefinition
         {
             definition.SetField("bestiaryEntry", value);
-            return definition;
-        }
-
-        public static T SetBestiaryLootOptions<T>(this T definition, List<ItemDefinition> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("bestiaryLootOptions", value);
             return definition;
         }
 
@@ -99,13 +76,6 @@ namespace SolastaModApi
             where T : MonsterDefinition
         {
             definition.SetField("characterFamily", value);
-            return definition;
-        }
-
-        public static T SetCreatureTags<T>(this T definition, List<string> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("creatureTags", value);
             return definition;
         }
 
@@ -141,13 +111,6 @@ namespace SolastaModApi
             where T : MonsterDefinition
         {
             definition.SetField("dualSex", value);
-            return definition;
-        }
-
-        public static T SetFeatures<T>(this T definition, List<FeatureDefinition> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("features", value);
             return definition;
         }
 
@@ -228,20 +191,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetLanguages<T>(this T definition, List<string> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("languages", value);
-            return definition;
-        }
-
-        public static T SetLegendaryActionOptions<T>(this T definition, List<LegendaryActionDescription> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("legendaryActionOptions", value);
-            return definition;
-        }
-
         public static T SetLegendaryCreature<T>(this T definition, bool value)
             where T : MonsterDefinition
         {
@@ -288,20 +237,6 @@ namespace SolastaModApi
             where T : MonsterDefinition
         {
             definition.SetField("patrolStance", value);
-            return definition;
-        }
-
-        public static T SetSavingThrowScores<T>(this T definition, List<MonsterSavingThrowProficiency> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("savingThrowScores", value);
-            return definition;
-        }
-
-        public static T SetSkillScores<T>(this T definition, List<MonsterSkillProficiency> value)
-            where T : MonsterDefinition
-        {
-            definition.SetField("skillScores", value);
             return definition;
         }
 

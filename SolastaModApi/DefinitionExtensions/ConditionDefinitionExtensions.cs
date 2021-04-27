@@ -1,7 +1,6 @@
 using SolastaModApi.Infrastructure;
 using UnityEngine.AddressableAssets;
 using TA.AI;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -106,13 +105,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetCancellingConditions<T>(this T definition, List<ConditionDefinition> value)
-            where T : ConditionDefinition
-        {
-            definition.SetField("cancellingConditions", value);
-            return definition;
-        }
-
         public static T SetCharacterShaderReference<T>(this T definition, AssetReference value)
             where T : ConditionDefinition
         {
@@ -138,13 +130,6 @@ namespace SolastaModApi
             where T : ConditionDefinition
         {
             definition.SetField("conditionStartParticleReference", value);
-            return definition;
-        }
-
-        public static T SetConditionTags<T>(this T definition, List<string> value)
-            where T : ConditionDefinition
-        {
-            definition.SetField("conditionTags", value);
             return definition;
         }
 
@@ -190,20 +175,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetFeatures<T>(this T definition, List<FeatureDefinition> value)
-            where T : ConditionDefinition
-        {
-            definition.SetField("features", value);
-            return definition;
-        }
-
-        public static T SetFeaturesToBrowse<T>(this T definition, List<FeatureDefinition> value)
-            where T : ConditionDefinition
-        {
-            definition.SetField("featuresToBrowse", value);
-            return definition;
-        }
-
         public static T SetForceBehavior<T>(this T definition, bool value)
             where T : ConditionDefinition
         {
@@ -239,13 +210,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetRecurrentEffectForms<T>(this T definition, List<EffectForm> value)
-            where T : ConditionDefinition
-        {
-            definition.SetField("recurrentEffectForms", value);
-            return definition;
-        }
-
         public static T SetRemovedFromTheGame<T>(this T definition, bool value)
             where T : ConditionDefinition
         {
@@ -278,13 +242,6 @@ namespace SolastaModApi
             where T : ConditionDefinition
         {
             definition.SetField("specialDuration", value);
-            return definition;
-        }
-
-        public static T SetSpecialInterruptions<T>(this T definition, List<ConditionInterruption> value)
-            where T : ConditionDefinition
-        {
-            definition.SetField("specialInterruptions", value);
             return definition;
         }
 

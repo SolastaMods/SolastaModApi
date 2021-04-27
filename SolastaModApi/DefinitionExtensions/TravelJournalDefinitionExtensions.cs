@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -30,13 +29,6 @@ namespace SolastaModApi
             where T : TravelJournalDefinition
         {
             definition.SetField("minHeight", value);
-            return definition;
-        }
-
-        public static T SetStyleDuplets<T>(this T definition, List<TravelStyleDuplet> value)
-            where T : TravelJournalDefinition
-        {
-            definition.SetField("styleDuplets", value);
             return definition;
         }
 

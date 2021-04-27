@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -31,13 +30,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionMagicAffinity
         {
             definition.SetField("concentrationAdvantage", value);
-            return definition;
-        }
-
-        public static T SetDeviceTagsAutoIdentifying<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionMagicAffinity
-        {
-            definition.SetField("deviceTagsAutoIdentifying", value);
             return definition;
         }
 
@@ -160,13 +152,6 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetSpellImmunities<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionMagicAffinity
-        {
-            definition.SetField("spellImmunities", value);
-            return definition;
-        }
-
         public static T SetUsesWarList<T>(this T definition, bool value)
             where T : FeatureDefinitionMagicAffinity
         {
@@ -178,13 +163,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionMagicAffinity
         {
             definition.SetField("warListSlotBonus", value);
-            return definition;
-        }
-
-        public static T SetWarListSpells<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionMagicAffinity
-        {
-            definition.SetField("warListSpells", value);
             return definition;
         }
     }

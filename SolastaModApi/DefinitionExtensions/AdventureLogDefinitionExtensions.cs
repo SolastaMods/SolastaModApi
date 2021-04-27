@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -135,13 +134,6 @@ namespace SolastaModApi
             where T : AdventureLogDefinition
         {
             definition.SetField("sectionHeaderHeight", value);
-            return definition;
-        }
-
-        public static T SetStyleDuplets<T>(this T definition, List<AdventureStyleDuplet> value)
-            where T : AdventureLogDefinition
-        {
-            definition.SetField("styleDuplets", value);
             return definition;
         }
 

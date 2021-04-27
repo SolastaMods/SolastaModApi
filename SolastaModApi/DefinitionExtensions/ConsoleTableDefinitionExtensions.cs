@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -23,13 +22,6 @@ namespace SolastaModApi
             where T : ConsoleTableDefinition
         {
             definition.SetField("lineSpacing", value);
-            return definition;
-        }
-
-        public static T SetStyleDuplets<T>(this T definition, List<ConsoleStyleDuplet> value)
-            where T : ConsoleTableDefinition
-        {
-            definition.SetField("styleDuplets", value);
             return definition;
         }
 

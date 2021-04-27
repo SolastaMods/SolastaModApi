@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -23,13 +22,6 @@ namespace SolastaModApi
             where T : RecipeDefinition
         {
             definition.SetField("craftingHours", value);
-            return definition;
-        }
-
-        public static T SetIngredients<T>(this T definition, List<IngredientOccurenceDescription> value)
-            where T : RecipeDefinition
-        {
-            definition.SetField("ingredients", value);
             return definition;
         }
 

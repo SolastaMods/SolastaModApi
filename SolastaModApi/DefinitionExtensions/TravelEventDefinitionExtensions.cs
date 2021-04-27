@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -33,31 +32,10 @@ namespace SolastaModApi
             return definition;
         }
 
-        public static T SetFailureLogEntries<T>(this T definition, List<string> value)
-            where T : TravelEventDefinition
-        {
-            definition.SetField("failureLogEntries", value);
-            return definition;
-        }
-
-        public static T SetIngredientGatheringProficiencies<T>(this T definition, List<string> value)
-            where T : TravelEventDefinition
-        {
-            definition.SetField("ingredientGatheringProficiencies", value);
-            return definition;
-        }
-
         public static T SetRecordedInAdventureLog<T>(this T definition, bool value)
             where T : TravelEventDefinition
         {
             definition.SetField("recordedInAdventureLog", value);
-            return definition;
-        }
-
-        public static T SetSuccessLogEntries<T>(this T definition, List<string> value)
-            where T : TravelEventDefinition
-        {
-            definition.SetField("successLogEntries", value);
             return definition;
         }
     }

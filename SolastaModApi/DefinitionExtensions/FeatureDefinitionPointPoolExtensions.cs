@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -16,13 +15,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionPointPool
         {
             definition.SetField("poolType", value);
-            return definition;
-        }
-
-        public static T SetRestrictedChoices<T>(this T definition, List<string> value)
-            where T : FeatureDefinitionPointPool
-        {
-            definition.SetField("restrictedChoices", value);
             return definition;
         }
 

@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 using static RuleDefinitions;
 
 namespace SolastaModApi
@@ -122,13 +121,6 @@ namespace SolastaModApi
             where T : FeatureDefinitionCombatAffinity
         {
             definition.SetField("myAttackModifierValueDetermination", value);
-            return definition;
-        }
-
-        public static T SetNullifiedBySenses<T>(this T definition, List<SenseMode.Type> value)
-            where T : FeatureDefinitionCombatAffinity
-        {
-            definition.SetField("nullifiedBySenses", value);
             return definition;
         }
 

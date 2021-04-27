@@ -1,5 +1,4 @@
 using SolastaModApi.Infrastructure;
-using System.Collections.Generic;
 
 namespace SolastaModApi
 {
@@ -9,13 +8,6 @@ namespace SolastaModApi
             where T : LootPackDefinition
         {
             definition.SetField("inDungeonEditor", value);
-            return definition;
-        }
-
-        public static T SetItemOccurencesList<T>(this T definition, List<ItemOccurence> value)
-            where T : LootPackDefinition
-        {
-            definition.SetField("itemOccurencesList", value);
             return definition;
         }
 

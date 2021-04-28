@@ -18,31 +18,15 @@ void Main()
 
 	var assembly = Assembly.LoadFile(Path.Combine(installDir, @"Solasta_Data\Managed\Assembly-CSharp.dll"));
 
-	var types = GetDerivedTypes(assembly, typeof(RulesetEntity));
-
-	types.Select(t => new { Type = t.type.Name, Base = t.baseType.Name }).Dump("RulesetEntity");
-
+	var types = GetDerivedTypes(assembly, typeof(BaseDefinition)).Select(a => a.type)
+		.Concat(GetDerivedTypes(assembly, typeof(RulesetEntity)).Select(a => a.type))
+		.Concat(GetDerivedTypes(assembly, typeof(GuiWrapper)).Select(a => a.type))
+		.Concat(GetTypesEndingIn(assembly, "Description"))
+		.Concat(GetTypes(assembly, "GuiPresentation"));
+		
 	foreach (var t in types)
 	{
-		CreateExtensions(t.type, nameof(RulesetEntity), true);
-	}
-
-	types = GetDerivedTypes(assembly, typeof(GuiWrapper));
-
-	types.Select(t => new { Type = t.type.Name, Base = t.baseType.Name }).Dump("GuiWrapper");
-
-	foreach (var t in types)
-	{
-		CreateExtensions(t.type, nameof(GuiWrapper), true);
-	}
-
-	var types2 = GetTypesEndingIn(assembly, "Description");
-	
-	types2.Select(t => t.Name).Dump("Description");
-
-	foreach (var t in types2)
-	{
-		CreateExtensions(t, "Description", true);
+		CreateExtensions(t, "", true);
 	}
 }
 
@@ -61,6 +45,16 @@ IEnumerable<Type> GetTypesEndingIn(Assembly assembly, string suffix)
 {
 	return assembly.GetTypes()
 		.Where(t => t.BaseType?.Name?.EndsWith(suffix, StringComparison.OrdinalIgnoreCase) ?? false)
+		.OrderBy(t => t.Name)
+		.ToList();
+}
+
+IEnumerable<Type> GetTypes(Assembly assembly, params string[] typeNames)
+{
+	var tn = typeNames.ToHashSet();
+	
+	return assembly.GetTypes()
+		.Where(t => tn.Contains(t.Name))
 		.OrderBy(t => t.Name)
 		.ToList();
 }
@@ -256,7 +250,7 @@ void CreateExtensions(Type t, string entityType, bool createFiles = false)
 
 	string SimplifyName(Type t)
 	{
-		if (t.FullName.Contains("+"))
+		if (t?.FullName?.Contains("+") ?? false)
 		{
 			return t.FullName.Replace("+", ".");
 		}

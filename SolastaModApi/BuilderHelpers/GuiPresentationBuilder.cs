@@ -1,5 +1,4 @@
-﻿using HarmonyLib;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 namespace SolastaModApi
@@ -16,23 +15,14 @@ namespace SolastaModApi
                 Title = title
             };
 
-            Traverse.Create(guiPresentation).Field("spriteReference").SetValue(new AssetReferenceSprite(""));
+            SetSpriteReference(new AssetReferenceSprite(""));
         }
 
-        public void SetColor(Color color)
-        {
-            Traverse.Create(guiPresentation).Field("color").SetValue(color);
-        }
+        public void SetColor(Color color) => guiPresentation.SetColor(color);
 
-        public void SetSortOrder(int sortOrder)
-        {
-            Traverse.Create(guiPresentation).Field("sortOrder").SetValue(sortOrder);
-        }
+        public void SetSortOrder(int sortOrder) => guiPresentation.SetSortOrder(sortOrder);
 
-        public void SetSpriteReference(AssetReferenceSprite sprite)
-        {
-            Traverse.Create(guiPresentation).Field("spriteReference").SetValue(sprite);
-        }
+        public void SetSpriteReference(AssetReferenceSprite sprite) => guiPresentation.SetSpriteReference(sprite);
 
         public GuiPresentation Build()
         {

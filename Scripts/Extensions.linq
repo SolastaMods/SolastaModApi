@@ -22,7 +22,7 @@ void Main()
 		.Concat(GetDerivedTypes(assembly, typeof(RulesetEntity)).Select(a => a.type))
 		.Concat(GetDerivedTypes(assembly, typeof(GuiWrapper)).Select(a => a.type))
 		.Concat(GetTypesEndingIn(assembly, "Description"))
-		.Concat(GetTypes(assembly, "GuiPresentation"));
+		.Concat(GetTypes(assembly, "GuiPresentation", "BaseDefinition"));
 		
 	foreach (var t in types)
 	{

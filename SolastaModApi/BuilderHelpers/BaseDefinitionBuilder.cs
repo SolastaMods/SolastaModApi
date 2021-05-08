@@ -87,7 +87,7 @@ namespace SolastaModApi
 
             if (assertIfDuplicate && (db.HasElement(definition.name) || db.HasElementByGuid(definition.GUID)))
                 throw new SolastaModApiException(
-                    $"The definition with name '{definition.name}' already exists in database '{typeof(TDb)}'");
+                    $"The definition with name '{definition.name}' already exists in database '{typeof(TDb).Name}'");
 
             db.Add(definition);
         }

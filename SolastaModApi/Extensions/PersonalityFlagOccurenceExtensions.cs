@@ -7,7 +7,7 @@ namespace SolastaModApi
     /// Not guaranteed to work against any other version of Solasta.
     /// If you find a problem please report at https://github.com/SolastaMods/SolastaModApi/issues.
     /// </summary>
-    public static class PersonalityFlagOccurenceExtensions
+    public static partial class PersonalityFlagOccurenceExtensions
     {
         public static T SetPersonalityFlag<T>(this T entity, string value)
             where T : PersonalityFlagOccurence

@@ -2,7 +2,6 @@
 using UnityEngine.AddressableAssets;
 using System.Collections.Generic;
 using static CharacterClassDefinition;
-using SolastaModApi.Infrastructure;
 using System;
 
 namespace SolastaModApi
@@ -35,12 +34,7 @@ namespace SolastaModApi
 
         public CharacterClassDefinitionBuilder AddPersonality(PersonalityFlagDefinition personalityType, int weight)
         {
-            PersonalityFlagOccurence personality = new PersonalityFlagOccurence();
-
-            personality.SetField("weight", weight);
-            personality.SetField("personalityFlag", personalityType.Name);
-
-            Definition.PersonalityFlagOccurences.Add(personality);
+            Definition.PersonalityFlagOccurences.Add(PersonalityFlagOccurenceExtensions.Create(weight, personalityType.Name));
             return this;
         }
 
@@ -146,11 +140,22 @@ namespace SolastaModApi
             return this;
         }
 
-        // TODO: change 'string guid' to GUID guidNamespace?
+        public FeatureDefinitionSubclassChoice BuildSubclassChoice(int level, string subclassSuffix, bool requireDeity, string name, GuiPresentation guiPresentation, Guid modGuidNamespace)
+        {
+            var builder = new FeatureDefinitionSubclassChoiceBuilder(name, modGuidNamespace);
+
+            return BuildSubclassChoice(builder, level, subclassSuffix, requireDeity, guiPresentation);
+        }
+
         public FeatureDefinitionSubclassChoice BuildSubclassChoice(int level, string subclassSuffix, bool requireDeity, string name, GuiPresentation guiPresentation, string guid)
         {
             var builder = new FeatureDefinitionSubclassChoiceBuilder(name, guid);
 
+            return BuildSubclassChoice(builder, level, subclassSuffix, requireDeity, guiPresentation);
+        }
+
+        private FeatureDefinitionSubclassChoice BuildSubclassChoice(FeatureDefinitionSubclassChoiceBuilder builder, int level, string subclassSuffix, bool requireDeity, GuiPresentation guiPresentation)
+        {
             var subclassChoice = builder
                 .SetSubclassSuffix(subclassSuffix)
                 .SetFilterByDeity(requireDeity)

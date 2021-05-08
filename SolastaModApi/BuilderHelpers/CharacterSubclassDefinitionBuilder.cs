@@ -20,12 +20,7 @@ namespace SolastaModApi
 
         public CharacterSubclassDefinitionBuilder AddPersonality(PersonalityFlagDefinition personalityType, int weight)
         {
-            var personalityFlag = new PersonalityFlagOccurence();
-
-            personalityFlag.SetWeight(weight);
-            personalityFlag.SetPersonalityFlag(personalityType.Name);
-
-            Definition.PersonalityFlagOccurences.Add(personalityFlag);
+            Definition.PersonalityFlagOccurences.Add(PersonalityFlagOccurenceExtensions.Create(weight, personalityType.Name));
             return this;
         }
 

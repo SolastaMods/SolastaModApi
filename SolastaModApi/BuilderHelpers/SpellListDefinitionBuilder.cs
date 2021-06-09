@@ -5,6 +5,8 @@ namespace SolastaModApi.BuilderHelpers
     class SpellListDefinitionBuilder : BaseDefinitionBuilder<SpellListDefinition>
     {
         /// <summary>
+        /// Example Use
+        /// 
         /// new SpellListDefinitionBuilder("demo", "demo", 5, true)
         ///     .ForLevel(1)
         ///         .AddSpell(DemoSpell)
